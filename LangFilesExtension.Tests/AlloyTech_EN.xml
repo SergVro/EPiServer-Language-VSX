@@ -1,0 +1,2680 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+  <language name="English" id="en">
+    <blog>
+      <item>
+        <comment>Comment:</comment>
+        <commentheading>Comments:</commentheading>
+        <commentlegend>Post a comment</commentlegend>
+        <errormessages>
+          <requiredcomment>Please fill in the Comment field.</requiredcomment>
+          <requiredname>Please fill in the Name field.</requiredname>
+        </errormessages>
+        <name>Name:</name>
+        <permanentlink>Permanent link</permanentlink>
+        <postedby>by:</postedby>
+        <posteddate>Posted date:</posteddate>
+        <send>Send</send>
+        <tags>Tags:</tags>
+      </item>
+      <itemsummary>
+        <readblog>Read blog:</readblog>
+      </itemsummary>
+      <listpage>
+        <dateheading>Blog entries posted during {0}</dateheading>
+        <errormessage>A configuration error has occurred. Either IsTagListing or IsDateListing must be true.</errormessage>
+        <tagheading>Blog entries tagged with {0}</tagheading>
+      </listpage>
+      <propertyblogtags>
+        <errormessage>
+          <categorytoolong>At least one of the tag names is too long. (Max. {0} characters)</categorytoolong>
+        </errormessage>
+        <existingtagsbutton>Add tags</existingtagsbutton>
+        <existingtagslabel>Existing tags</existingtagslabel>
+        <selectedtagslabel>Selected tags</selectedtagslabel>
+      </propertyblogtags>
+      <secondarylist>
+        <aboutme>About me</aboutme>
+        <archive>Archive</archive>
+        <tagcloud>Tag cloud</tagcloud>
+      </secondarylist>
+      <tagstatisticsupdater>
+        <description>Used for updating the blog tag statistics.</description>
+        <displayname>Update tag statistics</displayname>
+      </tagstatisticsupdater>
+    </blog>
+    <calendar>
+      <noeventonday>No events have been planned for this day</noeventonday>
+      <selectedperiod>Selected period</selectedperiod>
+    </calendar>
+    <captcha>
+      <errormessage>The entered text does not match the text shown in the image.</errormessage>
+      <heading>User verification</heading>
+      <imagealternativetext>Image for user verification</imagealternativetext>
+      <label>Please enter the text shown in the image:</label>
+    </captcha>
+    <common>
+      <messages>
+        <confirmdelete>Are you sure you want to delete this item?</confirmdelete>
+      </messages>
+    </common>
+    <document>
+      <download>Download:</download>
+    </document>
+    <dynamiccontenttypes>
+      <dynamiccontent name="MapDynamicContentDemo">
+        <caption>Google Maps</caption>
+        <description>Add and configure Google Maps</description>
+      </dynamiccontent>
+    </dynamiccontenttypes>
+    <editorstyleoptions>
+      <classic>Classic</classic>
+      <heading_1>Heading 1</heading_1>
+      <heading_2>Heading 2</heading_2>
+      <heading_3>Heading 3</heading_3>
+      <highlighted>Highlighted</highlighted>
+      <image_border>Image border</image_border>
+      <image_styles>Image Styles</image_styles>
+      <introduction>Introduction</introduction>
+      <left_aligned>Left-aligned</left_aligned>
+      <paragraph>Paragraph</paragraph>
+      <right_aligned>Right-aligned</right_aligned>
+      <table_styles>Table Styles</table_styles>
+      <top_left>Top left</top_left>
+      <top_right>Top right</top_right>
+    </editorstyleoptions>
+    <error>
+      <document>The page property "Document path" is not set.</document>
+      <mainmenucontainer>The dynamic property "MainMenuContainer" is not set.</mainmenucontainer>
+    </error>
+    <filemanager>
+      <button>
+        <back>Back</back>
+        <deleteversion>Delete version</deleteversion>
+        <rename>Rename</rename>
+        <replacefile>Replace File</replacefile>
+        <restore>Restore to this version</restore>
+        <upload>Upload</upload>
+      </button>
+      <choosefile>Select file:</choosefile>
+      <deletefilesandfoldersheading>Delete files/folders</deletefilesandfoldersheading>
+      <disabledfunctions>Some functions are unavailable due to insufficient access rights for this folder.</disabledfunctions>
+      <editfilesummaryheading>Edit file summary</editfilesummaryheading>
+      <errormessage>
+        <cannotchange>Unable to move, rename, delete or update the selected file. This file may be checked out by someone else.</cannotchange>
+        <checkedout>A file with the same name already exists and is checked out by someone else.</checkedout>
+        <containscheckedout>Unable to move or delete the selected folder. The folder may contain a file that is checked out by someone else.</containscheckedout>
+        <insufficientaccess>You have insufficient access rights to create or modify files in this folder.</insufficientaccess>
+        <insufficientaccesscreatefolder>You have insufficient access rights to create folders at this location.</insufficientaccesscreatefolder>
+        <insufficientaccessmetadata>You have insufficient access rights to modify this file.</insufficientaccessmetadata>
+        <insufficientaccessmove>You have insufficient access rights to move this item.</insufficientaccessmove>
+        <insufficientaccessremove>You have insufficient access rights to remove the selected items.</insufficientaccessremove>
+        <insufficientaccessrename>You have insufficient access rights to rename the selected item.</insufficientaccessrename>
+        <readonlyfile>A read-only file with the same name already exists.</readonlyfile>
+        <replacefile>A file with the same name already exists. Do you want to replace the file {0}?</replacefile>
+        <versionisnotfound>Unable to perform the operation. Version {0} cannot be found.</versionisnotfound>
+      </errormessage>
+      <filecomment>Comment:</filecomment>
+      <filelistheading>
+        <checkedout>Checked out</checkedout>
+        <lastchanged>Last changed</lastchanged>
+        <name>Name</name>
+        <size>Size</size>
+      </filelistheading>
+      <filename>File name</filename>
+      <files>Files</files>
+      <filesummary>
+        <author>Author</author>
+        <category>Category</category>
+        <comments>Comments</comments>
+        <keywords>Keywords</keywords>
+        <subject>Description</subject>
+        <title>Title</title>
+      </filesummary>
+      <filesummaryheading>File summary for</filesummaryheading>
+      <foldername>Folder name:</foldername>
+      <foldernotempty>The folder is not empty</foldernotempty>
+      <foldernotemptywarning>Some of the folders are not empty. Any content in the folders will be deleted.</foldernotemptywarning>
+      <folders>Folders</folders>
+      <maxuploadmessage>The size of the file to be uploaded may not exceed {0}.</maxuploadmessage>
+      <missingfoldererror>The file could not be created. Either a target folder is missing or you are not authorized to create files in the specified folder.</missingfoldererror>
+      <newfolder>New folder</newfolder>
+      <parentfolder>Parent Folder</parentfolder>
+      <renamefile>Rename file</renamefile>
+      <renamefolder>Rename folder</renamefolder>
+      <selectfilemessage>Select a file with the Browse button below and then click "Upload".</selectfilemessage>
+      <switchview>
+        <addfile>Add file</addfile>
+        <addfolder>Add folder</addfolder>
+        <checkin>Check in</checkin>
+        <checkout>Check out</checkout>
+        <copy>Copy</copy>
+        <cut>Cut</cut>
+        <delete>Delete</delete>
+        <details>Details</details>
+        <paste>Paste</paste>
+        <rename>Rename</rename>
+        <undocheckout>Undo</undocheckout>
+        <version>Version</version>
+        <view>View</view>
+      </switchview>
+      <uploadbutton>Upload</uploadbutton>
+      <uploadheading>File upload</uploadheading>
+      <validation>
+        <folderexists>A folder or file with the same name already exists.</folderexists>
+        <folderwithsamename>A folder with the name '{0}' exists in the current folder.</folderwithsamename>
+        <illigalchar>The name cannot contain /, ?, &lt;, &gt;, \, :, *, |, # or ".</illigalchar>
+        <nametolong>The folder name cannot be longer than 255 characters.</nametolong>
+        <requiredfile>Select a file.</requiredfile>
+        <requiredname>Enter a name.</requiredname>
+      </validation>
+      <versionfileheading>Versions for</versionfileheading>
+      <versionlistheading>
+        <comments>Comments</comments>
+        <created>Created</created>
+        <createdby>Created By</createdby>
+        <size>Size</size>
+        <version>Version</version>
+      </versionlistheading>
+    </filemanager>
+    <filemanagernavigator>
+      <virtualpathroots>
+        <virtualpathroot name="Documents">
+          <name>Documents</name>
+        </virtualpathroot>
+        <virtualpathroot name="Global Files">
+          <name>Global Files</name>
+        </virtualpathroot>
+      </virtualpathroots>
+    </filemanagernavigator>
+    <form>
+      <numberofvotes>Number of votes: {0}</numberofvotes>
+      <postedmessage>Thank you for your post!</postedmessage>
+      <showform>To the form</showform>
+      <showstat>Show statistics</showstat>
+    </form>
+    <forum>
+      <forumform>
+        <allowforumslabel>Allow forums:</allowforumslabel>
+        <allowthreadslabel>Allow threads:</allowthreadslabel>
+        <createbutton>Create forum</createbutton>
+        <heading>Create forum</heading>
+        <icondropdown>
+          <auction>Auction</auction>
+          <default>Default</default>
+          <information>Information</information>
+        </icondropdown>
+        <iconlabel>Icon:</iconlabel>
+        <titleerror>Title cannot be empty</titleerror>
+        <titlelabel>Title:</titlelabel>
+      </forumform>
+      <forumlist>
+        <createbutton>Add subforum</createbutton>
+        <deleteforumbutton>Delete this forum</deleteforumbutton>
+        <heading>Subforums</heading>
+        <setupbutton>Configure automatically</setupbutton>
+        <setuperror>The page is not set up correctly. Please verify your settings.</setuperror>
+        <title>Forum</title>
+        <updated>Latest updated thread</updated>
+      </forumlist>
+      <thread>
+        <addreply>Add reply</addreply>
+        <deletereply>Delete reply</deletereply>
+        <deletethread>Delete thread</deletethread>
+        <lock>Lock thread</lock>
+        <postedby>Posted by:</postedby>
+        <reply>Reply</reply>
+        <replyempty>Reply cannot be empty</replyempty>
+        <sticky>Sticky thread</sticky>
+        <toforum>To forum</toforum>
+        <unlock>Unlock thread</unlock>
+        <unsticky>Unsticky thread</unsticky>
+      </thread>
+      <threadform>
+        <contenterror>Text cannot be empty</contenterror>
+        <contentlabel>Text:</contentlabel>
+        <createbutton>Create Thread</createbutton>
+        <heading>Create Thread</heading>
+        <titleerror>Title cannot be empty</titleerror>
+        <titlelabel>Title:</titlelabel>
+      </threadform>
+      <threadlist>
+        <createbutton>Add thread</createbutton>
+        <createdby>Created by</createdby>
+        <heading>Threads</heading>
+        <replies>Replies</replies>
+        <title>Thread</title>
+        <updated>Last updated</updated>
+      </threadlist>
+      <today>Today</today>
+      <Yesterday>Yesterday</Yesterday>
+    </forum>
+    <headings>
+      <heading name="Flash Content">
+        <description>Flash Content</description>
+      </heading>
+      <heading name="Listings">
+        <description>Listings</description>
+      </heading>
+      <heading name="News &amp; Calendar">
+        <description>News &amp; Calendar</description>
+      </heading>
+      <heading name="SiteConfiguration">
+        <description>Site Configuration</description>
+      </heading>
+    </headings>
+    <login>
+      <becomemember>Register</becomemember>
+      <currentuser>Current user:</currentuser>
+      <editdetails>My settings</editdetails>
+      <email>Write your e-mail address:</email>
+      <error>
+        <loginfail>Log in failed. The supplied user name or password were incorrect.</loginfail>
+        <password>You must fill in a password</password>
+        <username>You must specify a user name</username>
+      </error>
+      <forgotpassword>Forgot password?</forgotpassword>
+      <login>Log in</login>
+      <logout>Log out</logout>
+      <password>Password</password>
+    </login>
+    <navigation>
+      <help>Help</help>
+      <listen>Listen</listen>
+      <readmore>Read more</readmore>
+      <search>Search</search>
+      <skipnavigation>Go to content</skipnavigation>
+      <startpage>Start</startpage>
+      <startpagelinktitle>To start page</startpagelinktitle>
+    </navigation>
+    <news>
+      <morenews>More news</morenews>
+      <publishdate>Published</publishdate>
+      <writername>Author</writername>
+    </news>
+    <pagetypes>
+      <common>
+        <property name="AboutTheSite">
+          <caption>About The Website Link List (footer)</caption>
+          <help>List of about the website links shown in the footer of the page</help>
+        </property>
+        <property name="AboutTheSiteHeading">
+          <caption>About The Website Heading (footer)</caption>
+          <help>Heading for the about the website links shown in the footer of the page</help>
+        </property>
+        <property name="ActiveThreadContainer">
+          <caption>Container for active threads</caption>
+          <help>The container for the active threads in this forum.</help>
+        </property>
+        <property name="Address1">
+          <caption>Address1</caption>
+          <help>Address1</help>
+        </property>
+        <property name="Address2">
+          <caption>Address2</caption>
+          <help>Address2</help>
+        </property>
+        <property name="Address3">
+          <caption>Address3</caption>
+          <help>Address3</help>
+        </property>
+        <property name="AllowForums">
+          <caption>Allow subforums in this forum</caption>
+          <help>State whether this forum can contain subforums.</help>
+        </property>
+        <property name="AllowThreads">
+          <caption>Allow threads in this forum</caption>
+          <help>State whether this forum can contain threads.</help>
+        </property>
+        <property name="ArchiveThreadContainer">
+          <caption>Container for archived threads</caption>
+          <help>The container for the archived threads in this forum.</help>
+        </property>
+        <property name="Author">
+          <caption>Author</caption>
+          <help>Enter the name of the author</help>
+        </property>
+        <property name="BlogStart">
+          <caption>Blog start page</caption>
+          <help>The start page of the blog to which this blog item belongs.</help>
+        </property>
+        <property name="CalendarContainer">
+          <caption>Show calendar from</caption>
+          <help>Specify a place in the tree structure from where the calendar events will be displayed. If your  events are subpages of this page, select "This page".</help>
+        </property>
+        <property name="CalendarItemContainer">
+          <caption>Calendar start</caption>
+          <help>Show calendar events from this page.</help>
+        </property>
+        <property name="ClientsArea">
+          <caption>Clients area</caption>
+          <help>The content of this field will be shown in the wide box. You can use both text and images for layout. Note that images should not be larger than the box area.</help>
+        </property>
+        <property name="CommentPageTypeName">
+          <caption>Blog Comment Page Type</caption>
+          <help>Blog Comment Page Type</help>
+        </property>
+        <property name="CompanyName">
+          <caption>Company name</caption>
+          <help>Name of the company</help>
+        </property>
+        <property name="ConfirmationMessage">
+          <caption>Confirmation message</caption>
+          <help>Text that will be sent in the confirmation e-mail.</help>
+        </property>
+        <property name="ContactName">
+          <caption>Contact name</caption>
+          <help>Contact name</help>
+        </property>
+        <property name="ContactPage">
+          <caption>Contact page</caption>
+          <help>Link to the page with contact information.</help>
+        </property>
+        <property name="Country">
+          <caption>Country</caption>
+          <help>Country</help>
+        </property>
+        <property name="CountryPresence">
+          <caption>Presence in the following countries</caption>
+          <help>Presence in the following countries</help>
+        </property>
+        <property name="DateContainer">
+          <caption>Container for date pages</caption>
+          <help>Should be set automatically.</help>
+        </property>
+        <property name="Description">
+          <caption>Heading for RSS source</caption>
+          <help>Specify a heading for RSS source </help>
+        </property>
+        <property name="Details">
+          <caption>Personal details</caption>
+          <help>Enter a short description of the blogger.</help>
+        </property>
+        <property name="DisableAnonymousComments">
+          <caption>Deny comments from anonymous users</caption>
+          <help>State whether anonymous users are allowed to post comments to blog entries.</help>
+        </property>
+        <property name="DisableCompany">
+          <caption>Editing company is not allowed</caption>
+          <help>Editing company is not allowed</help>
+        </property>
+        <property name="DisableCountry">
+          <caption>Editing country is not allowed</caption>
+          <help>Editing country is not allowed</help>
+        </property>
+        <property name="DisableEmail">
+          <caption>Editing e-mail is not allowed</caption>
+          <help>Editing e-mail is not allowed</help>
+        </property>
+        <property name="DisableFirstname">
+          <caption>Editing first name is not allowed</caption>
+          <help>Editing first name is not allowed</help>
+        </property>
+        <property name="DisableLanguage">
+          <caption>Editing language is not allowed</caption>
+          <help>Editing language is not allowed</help>
+        </property>
+        <property name="DisableLastname">
+          <caption>Editing last name is not allowed</caption>
+          <help>Editing last name is not allowed</help>
+        </property>
+        <property name="DisableTitle">
+          <caption>Editing title is not allowed</caption>
+          <help>Editing title is not allowed</help>
+        </property>
+        <property name="DisplayDate">
+          <caption>Display date in the main list</caption>
+          <help>Display date for each item</help>
+        </property>
+        <property name="DisplayDocumentLink">
+          <caption>Display document link in the main list</caption>
+          <help>Display document link in the main list</help>
+        </property>
+        <property name="DocumentInternalPath">
+          <caption>Document path</caption>
+          <help>Path to document</help>
+        </property>
+        <property name="DocumentListRoot">
+          <caption>Fetch document list from</caption>
+          <help>Specify the page you want to fetch the document listing from. If not set, the page list will not be shown.</help>
+        </property>
+        <property name="DocumentPath">
+          <caption>Path to document</caption>
+          <help>Path to a copy of the source document</help>
+        </property>
+        <property name="Email">
+          <caption>E-mail</caption>
+          <help>E-mail address</help>
+        </property>
+        <property name="EmailBody">
+          <caption>E-mail body</caption>
+          <help>Content of the e-mail address that will be sent.</help>
+        </property>
+        <property name="EmailSender">
+          <caption>E-mail sender</caption>
+          <help>E-mail address that will be used as sender address.</help>
+        </property>
+        <property name="EmailSubject">
+          <caption>E-mail subject</caption>
+          <help>Subject of the e-mail to be sent.</help>
+        </property>
+        <property name="EmbeddedObjectHeight">
+          <caption>Height of the flash movie</caption>
+          <help>Specify the height of the flash movie in pixels.</help>
+        </property>
+        <property name="EmbeddedObjectWidth">
+          <caption>Width of the flash movie</caption>
+          <help>Specify the width of the flash movie in pixels.</help>
+        </property>
+        <property name="EmbeddedURL">
+          <caption>Path to flash movie</caption>
+          <help>Specify the address to the Flash movie</help>
+        </property>
+        <property name="EnableStatistics">
+          <caption>Show statistics</caption>
+          <help>Show statistics on page for visitors.</help>
+        </property>
+        <property name="EPiWebSites">
+          <caption>EPiServer Website List (footer)</caption>
+          <help>List of EPiServer websites shown in the footer of the page</help>
+        </property>
+        <property name="EPiWebSitesHeading">
+          <caption>EPiServer Websites Heading (footer)</caption>
+          <help>Heading for the EPiServer websites shown in the footer of the page</help>
+        </property>
+        <property name="EPSUBSCRIBE">
+          <caption>Activate subscription</caption>
+          <help>Activates a subscription for this page</help>
+        </property>
+        <property name="EPSUBSCRIBE-EXCLUDE">
+          <caption>Block subscription for this page</caption>
+          <help>Select this check box to block subscription updates for this page.</help>
+        </property>
+        <property name="EPSUBSCRIBEHIDDEN">
+          <caption>Do not show on the subscription page</caption>
+          <help>Hides this page on the subscriptions page</help>
+        </property>
+        <property name="EPSUBSCRIBE-ROOT">
+          <caption>Root page for Subscription</caption>
+          <help>Specify a page in the tree from where the subscription will start.</help>
+        </property>
+        <property name="EventsCount">
+          <caption>Number of Event items</caption>
+          <help>Using an integer, specify the number of pages to be displayed in the listing</help>
+        </property>
+        <property name="EventsRoot">
+          <caption>Fetch Event list from</caption>
+          <help>Specify a page whose children will be used to generate the event list. If not set the news list will not be shown.</help>
+        </property>
+        <property name="EventStartDate">
+          <caption>Start date</caption>
+          <help>Specify the start date for the activity.</help>
+        </property>
+        <property name="EventStopDate">
+          <caption>Stop date</caption>
+          <help>Specify the stop date for the activity.</help>
+        </property>
+        <property name="FallbackImage">
+          <caption>Fallback image</caption>
+          <help>Image shown when flash is unavaible</help>
+        </property>
+        <property name="FeedCount">
+          <caption>Number of items in a feed</caption>
+          <help>The number of items that should be sent out in an RSS/Atom feed.</help>
+        </property>
+        <property name="ForumPageTypeName">
+          <caption>Forum Page Type</caption>
+          <help>Forum Page Type</help>
+        </property>
+        <property name="ForumStart">
+          <caption>Forum start page</caption>
+          <help>The start page of the forum to which the forum item belongs.</help>
+        </property>
+        <property name="Heading">
+          <caption>Heading</caption>
+          <help>Specify a heading that will present the main title of this page. If this property is not set, the page name will be used as a heading instead.</help>
+        </property>
+        <property name="HistoryLength">
+          <caption>Max. age of listed items</caption>
+          <help>Maximum age of items, in days, that should be viewed in the list.</help>
+        </property>
+        <property name="Icon">
+          <caption>The icon for this forum</caption>
+          <help>The name of the icon that this forum should use.</help>
+        </property>
+        <property name="Image">
+          <caption>Image</caption>
+          <help>Specify an image that will be shown on the startpage (900*341 pixels)</help>
+        </property>
+        <property name="Image1">
+          <caption>Image 1</caption>
+          <help>Image shown in flash</help>
+        </property>
+        <property name="Image2">
+          <caption>Image 2</caption>
+          <help>Image shown in flash</help>
+        </property>
+        <property name="Image3">
+          <caption>Image 3</caption>
+          <help>Image shown in flash</help>
+        </property>
+        <property name="Image4">
+          <caption>Image 4</caption>
+          <help>Image shown in flash</help>
+        </property>
+        <property name="Image5">
+          <caption>Image 5</caption>
+          <help>Image shown in flash</help>
+        </property>
+        <property name="IndexContainer">
+          <caption>Display content from page</caption>
+          <help>Specify the page from which the index will start.</help>
+        </property>
+        <property name="IndexRoot">
+          <caption>Display content from page</caption>
+          <help>Specify the page from which the site map will start</help>
+        </property>
+        <property name="IsDateListing">
+          <caption>Date listing</caption>
+          <help>Should be set automatically.</help>
+        </property>
+        <property name="IsDocumentPageType">
+          <caption>Upload complete HTML edition and copy of source document</caption>
+          <help>Select this option to be able to display the complete HTML edition</help>
+        </property>
+        <property name="IsLocked">
+          <caption>Thread is locked</caption>
+          <help>States whether this thread is locked.</help>
+        </property>
+        <property name="IsTagListing">
+          <caption>Tag listing</caption>
+          <help>Should be set automatically.</help>
+        </property>
+        <property name="IsTeamLevel">
+          <caption>Team level</caption>
+          <help>Should be set automatically.</help>
+        </property>
+        <property name="ItemPageTypeName">
+          <caption>Blog Page Type</caption>
+          <help>Blog Page type to be used</help>
+        </property>
+        <property name="ListCount">
+          <caption>Display number of pages in the main list</caption>
+          <help>Specify how many pages should be displayed in the listing</help>
+        </property>
+        <property name="ListingSlideContainer">
+          <caption>Downloading presentations</caption>
+          <help>Select the page from which you want to download a presentation.</help>
+        </property>
+        <property name="ListingSlideCount">
+          <caption>Show number of pages in presentation</caption>
+          <help>Specify how many pages, in whole numbers, are to be displayed in the presentation.</help>
+        </property>
+        <property name="ListPageTypeName">
+          <caption>Blog List Page Type</caption>
+          <help>Blog List Page Type</help>
+        </property>
+        <property name="ListRoot">
+          <caption>Fetch main listing from</caption>
+          <help>Specify the page from which you want to fetch the listing. The list will be shown in the main content area. If not set the page list will not be shown.</help>
+        </property>
+        <property name="Location">
+          <caption>Show location of an event</caption>
+          <help>Select one location for this event</help>
+        </property>
+        <property name="LoginPage">
+          <caption>Login page</caption>
+          <help>Specify the login page for this part of the site.</help>
+        </property>
+        <property name="Logotype">
+          <caption>Logotype</caption>
+          <help>Specify the path to the logotype image shown in the top of the website</help>
+        </property>
+        <property name="MainBody">
+          <caption>Main body</caption>
+          <help>The main body will be shown in the main content area of the page. You can insert for example text, images and tables, using the XHTML-editor.</help>
+        </property>
+        <property name="MainIntro">
+          <caption>Introduction</caption>
+          <help>Short version of the news content. This text will be used in news listings if available.</help>
+        </property>
+        <property name="MainLinksCount">
+          <caption>Display number of links</caption>
+          <help>Specify the number of links to be displayed in the listing.</help>
+        </property>
+        <property name="MainLinksHeading">
+          <caption>Main list heading</caption>
+          <help>Heading text for main link list</help>
+        </property>
+        <property name="MainLinksRoot">
+          <caption>Fetch left listing from</caption>
+          <help>Specify the page from which you want to fetch the listing.</help>
+        </property>
+        <property name="MainListCount">
+          <caption>Display number of pages in the main list</caption>
+          <help>Using an integer, specify the number of pages to be displayed in the listing</help>
+        </property>
+        <property name="MainListRoot">
+          <caption>Fetch main listing from</caption>
+          <help>Specify the page from which you want to fetch the listing. The list will be shown in the main content area. If not set the page list will not be shown.</help>
+        </property>
+        <property name="MainMenuContainer">
+          <caption>Display menus from</caption>
+          <help>Specify a place in the menu tree from where menus will be displayed on the selected page</help>
+        </property>
+        <property name="MaxCount">
+          <caption>Max. number of posts</caption>
+          <help>Maximum number of posts viewed in the list.</help>
+        </property>
+        <property name="MetaAuthor">
+          <caption>Writer</caption>
+          <help>Specify the author of text that will be used by search engines. If not set, the value in the dynamic property will be used instead.</help>
+        </property>
+        <property name="MetaDescription">
+          <caption>Page description</caption>
+          <help>Describe the content of the page</help>
+        </property>
+        <property name="MetaKeywords">
+          <caption>Standard search words for pages</caption>
+          <help>Specify a comma-separated list of search words that match this page</help>
+        </property>
+        <property name="nDaysToRender">
+          <caption>Number of days to show in calendar</caption>
+          <help>Specify how many days you want the calendar to show.</help>
+        </property>
+        <property name="NewsCount">
+          <caption>Number of News items</caption>
+          <help>Using an integer, specify the number of pages to be displayed in the listing</help>
+        </property>
+        <property name="NewsRoot">
+          <caption>Fetch News list from</caption>
+          <help>Specify a page whose children will be used to generate the news list. If not set the news list will not be shown.</help>
+        </property>
+        <property name="NoEmployees">
+          <caption>Number of employees</caption>
+          <help>Number of employees</help>
+        </property>
+        <property name="NumberOfReplies">
+          <caption>Number of replies</caption>
+          <help>The number of replies that has been made to this thread.</help>
+        </property>
+        <property name="OtherWebSites">
+          <caption>Other Website List (footer)</caption>
+          <help>List of other websites shown in the footer of the page</help>
+        </property>
+        <property name="OtherWebSitesHeading">
+          <caption>Other Websites Heading (footer)</caption>
+          <help>Heading for the other websites shown in the footer of the page</help>
+        </property>
+        <property name="PasswordChangeSuccessBody">
+          <caption>Password change success</caption>
+          <help>Body text shown when a password change succeeds</help>
+        </property>
+        <property name="PasswordLength">
+          <caption>Password length</caption>
+          <help>The shortest allowed password</help>
+        </property>
+        <property name="PersonalStartPageTypeName">
+          <caption>Blog Person Start Page Type</caption>
+          <help>Blog Person Start Page Type used by blogging</help>
+        </property>
+        <property name="Phone">
+          <caption>Phone</caption>
+          <help>Phone</help>
+        </property>
+        <property name="PostPageTypeName">
+          <caption>Forum Post Page Type</caption>
+          <help>Forum Post Page Type</help>
+        </property>
+        <property name="PrivacyPage">
+          <caption>Privacy page</caption>
+          <help>Link to the page with legal information.</help>
+        </property>
+        <property name="RecentContainer">
+          <caption>Display pages from</caption>
+          <help>Specify the page from which you want to display the recently changed pages.</help>
+        </property>
+        <property name="RecentHours">
+          <caption>Display the pages that have been changed in the past x hours</caption>
+          <help>Specify how many hours in the past that you want to display changed pages.</help>
+        </property>
+        <property name="RefreshRate">
+          <caption>Number of seconds each page is to be displayed</caption>
+          <help>Specify how many seconds each page should be displayed in the presentation.</help>
+        </property>
+        <property name="RelatedSites">
+          <caption>Related Website List (footer)</caption>
+          <help>List of related websites shown in the footer of the page</help>
+        </property>
+        <property name="RelatedSitesHeading">
+          <caption>Related Websites Heading (footer)</caption>
+          <help>Heading for the related websites shown in the footer of the page</help>
+        </property>
+        <property name="ResellerDescription">
+          <caption>Description</caption>
+          <help>Description</help>
+        </property>
+        <property name="ResellerID">
+          <caption>Reseller ID</caption>
+          <help>Reseller ID</help>
+        </property>
+        <property name="RootFolder">
+          <caption>Search path to folder to be displayed</caption>
+          <help>Specify the address of the folder, the content of which is to be displayed in the list</help>
+        </property>
+        <property name="RssContainer">
+          <caption>RSS Main Page</caption>
+          <help>Specify a main page for all RSS source pages</help>
+        </property>
+        <property name="RssSource">
+          <caption>RSS source page</caption>
+          <help>Specify a page in the tree that is a source page of RSS content on this website.</help>
+        </property>
+        <property name="RssUrl">
+          <caption>Search path to RSS source</caption>
+          <help>Specify the address content in RSS format. This is usually a web address.</help>
+        </property>
+        <property name="SearchPage">
+          <caption>Search page</caption>
+          <help>Link to the search page for this part of the site.</help>
+        </property>
+        <property name="SearchRoot">
+          <caption>Start page for the search</caption>
+          <help>Specify the start page for search. If this field is left empty, the search will start from the start page</help>
+        </property>
+        <property name="SecondaryBody">
+          <caption>Secondary body</caption>
+          <help>The secondary body will be shown in the right column of the page. You can use both text and images for layout. Note that images should not be larger than the right area.</help>
+        </property>
+        <property name="SecondaryLinksCount">
+          <caption>Display number of links</caption>
+          <help>Specify how many links should be displayed in the listing.</help>
+        </property>
+        <property name="SecondaryLinksDisplayDate">
+          <caption>Display date for each item in secondary list</caption>
+          <help>Indicates if date should be displayed for each list item</help>
+        </property>
+        <property name="SecondaryLinksHeading">
+          <caption>Secondary list heading</caption>
+          <help>Heading text for secondary link list</help>
+        </property>
+        <property name="SecondaryLinksRoot">
+          <caption>Fetch right listing from</caption>
+          <help>Specify the page from which you want to fetch the listing.</help>
+        </property>
+        <property name="SecondaryListCount">
+          <caption>Display number of pages in the secondary list</caption>
+          <help>Number of secondary list items in the list.</help>
+        </property>
+        <property name="SecondaryListDisplayDate">
+          <caption>Display date in the secondary list</caption>
+          <help>Display date for each item</help>
+        </property>
+        <property name="SecondaryListHeading">
+          <caption>Secondary list heading</caption>
+          <help>Secondary list heading</help>
+        </property>
+        <property name="SecondaryListRoot">
+          <caption>Fetch secondary listing from</caption>
+          <help>Specify the page you want to fetch the listing from. The list will be shown in the right column. If it is not set the page list will not be shown.</help>
+        </property>
+        <property name="SelectedWebPart">
+          <caption>Select web part</caption>
+          <help>Selects which web part to use on the page</help>
+        </property>
+        <property name="SEODescription">
+          <caption>Page description</caption>
+          <help>Description of the page</help>
+        </property>
+        <property name="SEORobots">
+          <caption>Search robots</caption>
+          <help>Specify how search robots should handle the page</help>
+        </property>
+        <property name="SEOTitle">
+          <caption>Page title</caption>
+          <help>The title of the page</help>
+        </property>
+        <property name="SitemapPage">
+          <caption>Site map page</caption>
+          <help>Link to the site map page.</help>
+        </property>
+        <property name="SortFilesBy">
+          <caption>Sort files by</caption>
+          <help>Select how the list is to be sorted</help>
+        </property>
+        <property name="Speaker">
+          <caption>Show speaker of an event</caption>
+          <help>Select one speaker for this event</help>
+        </property>
+        <property name="StickyThreadContainer">
+          <caption>Container for sticky threads</caption>
+          <help>The container for the sticky threads in this forum.</help>
+        </property>
+        <property name="SubscriptionMailBody">
+          <caption>Introduction text in subscription e-mail</caption>
+          <help>Enter the text that will be the message body for the subscription e-mail.</help>
+        </property>
+        <property name="SubscriptionMailFrom">
+          <caption>Sender address for subscription e-mail</caption>
+          <help>E-mail address that will be used as sender for the subscription e-mail.</help>
+        </property>
+        <property name="SubscriptionMailReadMore">
+          <caption>Link text in the subscription e-mail</caption>
+          <help>This text will build the link text that the user can click on in the subcription e-mail.</help>
+        </property>
+        <property name="SubscriptionMailSubject">
+          <caption>Subject for subscription e-mail</caption>
+          <help>This is the subject field for the subscription e-mail.</help>
+        </property>
+        <property name="SummaryLength">
+          <caption>Summary length</caption>
+          <help>Length of summary for each list item</help>
+        </property>
+        <property name="SummaryTextLength">
+          <caption>Length of text summary</caption>
+          <help>Number of characters used to truncate the summary text.</help>
+        </property>
+        <property name="TagCloudValue">
+          <caption>Tag cloud value</caption>
+          <help>Should be set automatically.</help>
+        </property>
+        <property name="TagContainer">
+          <caption>Container for tag pages</caption>
+          <help>Should be set automatically.</help>
+        </property>
+        <property name="Tags">
+          <caption>Tags</caption>
+          <help>Enter a comma-separated list and/or add from existing tags.</help>
+        </property>
+        <property name="TeamStartPageTypeName">
+          <caption>Blog Team Start Page Type</caption>
+          <help>Blog Team Start Page Type to be used for blogging</help>
+        </property>
+        <property name="TemplateContainer">
+          <caption>Workroom templates</caption>
+          <help>A reference to the container that contains avaliable workroom templates.</help>
+        </property>
+        <property name="Text1">
+          <caption>Text 1</caption>
+          <help>Text shown in flash</help>
+        </property>
+        <property name="Text2">
+          <caption>Text 2</caption>
+          <help>Text shown in flash</help>
+        </property>
+        <property name="Text3">
+          <caption>Text 3</caption>
+          <help>Text shown in flash</help>
+        </property>
+        <property name="Text4">
+          <caption>Text 4</caption>
+          <help>Text shown in flash</help>
+        </property>
+        <property name="Text5">
+          <caption>Text 5</caption>
+          <help>Text shown in flash</help>
+        </property>
+        <property name="ThirdBody">
+          <caption>Third body</caption>
+          <help>The content of this field will be shown in box 3 of the page. You can use both text and images for layout. Note that images should not be larger than the box area.</help>
+        </property>
+        <property name="ThreadContainerPageTypeName">
+          <caption>Forum Thread Container Page Type</caption>
+          <help>Forum Thread Container Page Type</help>
+        </property>
+        <property name="ThreadPageTypeName">
+          <caption>Forum Thread Page Type</caption>
+          <help>Forum Thread Page Type</help>
+        </property>
+        <property name="Thumbnail">
+          <caption>Thumbnail image</caption>
+          <help>Specify an image to be shown in page listings where it applies</help>
+        </property>
+        <property name="URL">
+          <caption>URL</caption>
+          <help>URL</help>
+        </property>
+        <property name="UsageStatistics">
+          <caption>Statistics for tag usage</caption>
+          <help>Should be set automatically.</help>
+        </property>
+        <property name="ValidDays">
+          <caption>Recurring day</caption>
+          <help>Specify if the activity is to recur at set intervals.</help>
+        </property>
+        <property name="VideoSourceURL">
+          <caption>Video file</caption>
+          <help>Specify a video file in .flv format.</help>
+        </property>
+        <property name="WorkroomIcon">
+          <caption>Icon image for this workroom</caption>
+          <help>An image to use as the icon for this workroom.</help>
+        </property>
+        <property name="WorkroomStart">
+          <caption>Start page for this workroom</caption>
+          <help>The start page of the workroom to which this page belongs.</help>
+        </property>
+        <property name="Writer">
+          <caption>Blogger name</caption>
+          <help>Enter the name of the blogger.</help>
+        </property>
+        <property name="XForm">
+          <caption>Form</caption>
+          <help>Specify the form that will be shown on this page. By clicking the button, you can create your own forms</help>
+        </property>
+      </common>
+      <pagetype name="[AlloyTech] Blog comment">
+        <description>Page used to store comments to blog items.</description>
+        <name>[AlloyTech] Blog comment</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Blog item">
+        <description>A blog item page that is used for a single blog entry.</description>
+        <name>[AlloyTech] Blog item</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Blog list">
+        <description>Listing page used for date listings and tag listings.</description>
+        <name>[AlloyTech] Blog list</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Blog personal start">
+        <description>The start page for a personal blog.</description>
+        <name>[AlloyTech] Personal blog start</name>
+        <property name="Image">
+          <caption>Image of blogger</caption>
+          <help>Select an image for the blogger.</help>
+        </property>
+      </pagetype>
+      <pagetype name="[AlloyTech] Blog team start">
+        <description>The start page for a team blog.</description>
+        <name>[AlloyTech] Team blog start</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Calendar">
+        <description>A page showing calendar events.</description>
+        <name>[AlloyTech] Calendar</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Calendar event">
+        <description>Page for an event in the calendar.</description>
+        <name>[AlloyTech] Calendar event</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Changed recently">
+        <description>Page that displays a list of pages that have recently been changed.</description>
+        <name>[AlloyTech] Changed recently</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Company Facts">
+        <description>Container used for company facts as dynamic content</description>
+        <name>[AlloyTech] Company Facts</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Document">
+        <description>This page type is used to publish documents from Microsoft Office.</description>
+        <name>[AlloyTech] Document</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Event item">
+        <description>Page that shows a specific event</description>
+        <name>[AlloyTech] Event item</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Forum">
+        <description>A forum page.</description>
+        <name>[AlloyTech] Forum</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Forum post">
+        <description>A reply to a forum thread.</description>
+        <name>[AlloyTech] Forum post</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Forum thread">
+        <description>A thread in a forum.</description>
+        <name>[AlloyTech] Forum thread</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Forum thread container">
+        <description>A container for threads in a forum.</description>
+        <name>[AlloyTech] Forum thread container</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Listing">
+        <description>Shows page summary</description>
+        <name>[AlloyTech] Listing</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Login">
+        <description>This page type is used to create a login page to the website.</description>
+        <name>[AlloyTech] Login</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] My Settings">
+        <description>A settings page where users can change their personal settings.</description>
+        <name>[AlloyTech] My settings</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] News item">
+        <description>This page type contains the data for one news item.</description>
+        <name>[AlloyTech] News item</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Notification Email">
+        <description>Notification E-mail Template</description>
+        <name>[AlloyTech] Notification E-mail</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Registration">
+        <description>This page type is where visitors can register themselves on the website.</description>
+        <name>[AlloyTech] Registration</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Reseller">
+        <description>This page shows data about resellers.</description>
+        <name>[AlloyTech] Reseller</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] RSS source">
+        <description>This page type displays information from EPiServer in RSS format.</description>
+        <name>[AlloyTech] RSS source</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Search page">
+        <description>This page type displays the search result from the quick search bar and an interface for advanced search.</description>
+        <name>[AlloyTech] Search page</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] SiteMap">
+        <description>This page type creates a list of the content on all or part of the website.</description>
+        <name>[AlloyTech] Site map</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Standard page">
+        <description>This page type is the most commonly used page on the website. It can be used for ordinary pages as well as for news and events.</description>
+        <name>[AlloyTech] Standard page</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Start page">
+        <description>The start page is the main entrance to the website containing primary and secondary content fields as well as different listings of links.</description>
+        <name>[AlloyTech] Start page</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Subscription">
+        <description>This page type is used for visitors to select subscription information.</description>
+        <name>[AlloyTech] Subscription</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] User profile">
+        <description>User profile</description>
+        <name>[AlloyTech] User profile</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Workroom Calendar">
+        <description>A calendar page in a workroom.</description>
+        <name>[AlloyTech] Workroom calendar</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Workroom Calendar event">
+        <description>Page for an event in the calendar.</description>
+        <name>[AlloyTech] Workroom calendar event</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Workroom File Manager">
+        <description>File management in a workroom.</description>
+        <name>[AlloyTech] Workroom File Manager</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Workroom list">
+        <description>Page that lists all available workrooms.</description>
+        <name>[AlloyTech] Workroom list</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Workroom Membership Manager">
+        <description>Page for adding or modifying membership in a workroom.</description>
+        <name>[AlloyTech] Workroom Membership Manager</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Workroom news list">
+        <description>A news page in a workroom.</description>
+        <name>[AlloyTech] Workroom newslist</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Workroom Settings">
+        <description>Page for changing settings for a workroom.</description>
+        <name>[AlloyTech] Workroom settings</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] XForm page">
+        <description>This page type extends the standard page with a form.</description>
+        <name>[AlloyTech] Form page</name>
+      </pagetype>
+    </pagetypes>
+    <register>
+      <confirmation>Thank you</confirmation>
+      <error>
+        <confirmpassword>Please confirm the password you entered</confirmpassword>
+        <couldnotsave>Unable to save changes</couldnotsave>
+        <email>Please enter your e-mail address</email>
+        <firstname>Please enter your first name</firstname>
+        <incorrectemail>The e-mail address you've entered is incorrect</incorrectemail>
+        <lastname>Please enter your last name</lastname>
+        <password>Please enter a password</password>
+        <passwordlength>The password you've entered is too short. Min length:</passwordlength>
+        <passwordrepeat>The passwords you've entered do not match</passwordrepeat>
+      </error>
+      <password>Enter password</password>
+      <repeatpassword>Repeat password</repeatpassword>
+      <signupbutton>Sign up</signupbutton>
+    </register>
+    <search>
+      <advancedsearch>Advanced Search</advancedsearch>
+      <button>Search</button>
+      <findsimilar>Find Similar</findsimilar>
+      <nosearchresult>No matching results were found</nosearchresult>
+      <onlywholewords>Match whole word</onlywholewords>
+      <percentrelevancy>% relevancy</percentrelevancy>
+      <relevancy>Relevancy</relevancy>
+      <searchfiles>Search in files</searchfiles>
+      <searchfor>Search for:</searchfor>
+      <searchresult>Search result:</searchresult>
+      <searchstring>Search here</searchstring>
+    </search>
+    <subscription>
+      <daily>Daily</daily>
+      <email>E-mail address</email>
+      <error>
+        <email>Please enter your e-mail address</email>
+        <incorrectemail>The e-mail address you've entered is incorrect</incorrectemail>
+      </error>
+      <fastaspossible>As soon as possible</fastaspossible>
+      <interval>Interval</interval>
+      <monthly>Monthly</monthly>
+      <subscribe>Subscribe</subscribe>
+      <subscription>Subscription</subscription>
+      <weekly>Weekly</weekly>
+    </subscription>
+    <templates>
+      <changedpages>
+        <header>Last changed files</header>
+        <lastmodified>Last changed</lastmodified>
+        <page>Page</page>
+        <updatedpages>Latest updated pages</updatedpages>
+      </changedpages>
+      <dynamiccontent>
+        <map>
+          <addresslabel>Address</addresslabel>
+          <altlabel>Image alt text</altlabel>
+          <displaystaticimagelabel>Display as image</displaystaticimagelabel>
+          <emptysearchresults>Address is not found</emptysearchresults>
+          <heighterrormessage>The map height value must be between 100 and 2000</heighterrormessage>
+          <heightlabel>Map height</heightlabel>
+          <hidesearchresults>Hide</hidesearchresults>
+          <missingmapdata>The map settings could not be loaded</missingmapdata>
+          <searchbuttonlabel>Search</searchbuttonlabel>
+          <searchresultslabel>Search results</searchresultslabel>
+          <selectionerrormessage>A map cannot be saved without a location. Select a location by double-clicking on a map or a search result marker.</selectionerrormessage>
+          <selectiontextmessage>Please select a location.</selectiontextmessage>
+          <unabletoinitializemessage>Unable to initialize maps</unabletoinitializemessage>
+          <widtherrormessage>The map width value must be between 100 and 2000</widtherrormessage>
+          <widthlabel>Map width</widthlabel>
+        </map>
+      </dynamiccontent>
+      <events>
+        <location>Location</location>
+        <speaker>Speaker</speaker>
+      </events>
+      <personalsettings>
+        <validation>
+          <emailexists>The e-mail address that you entered is already in use</emailexists>
+        </validation>
+      </personalsettings>
+      <reseller>
+        <address>Address</address>
+        <contacts>Contacts</contacts>
+        <name>Name</name>
+        <url>URL</url>
+      </reseller>
+    </templates>
+    <usersettings>
+      <changepassword>Change password</changepassword>
+      <confirmpassword>Confirm password</confirmpassword>
+      <email>E-mail address</email>
+      <firstname>First name</firstname>
+      <lastname>Last name</lastname>
+      <mysettings>My settings</mysettings>
+      <newpassword>New password</newpassword>
+      <username>User name</username>
+    </usersettings>
+    <workroom>
+      <calendar>
+        <buttonaddevent>Add Event</buttonaddevent>
+        <buttondeletecalendar>Delete Calendar</buttondeletecalendar>
+        <buttoneditname>Edit Name</buttoneditname>
+        <createheading>Create Event</createheading>
+        <dateformat>Example: 11/25/2007</dateformat>
+        <editheading>Edit Event</editheading>
+        <invalidstartdate>The start date is not a valid date</invalidstartdate>
+        <invalidstopdate>The end date is not a valid date</invalidstopdate>
+        <latestarttime>The start time must occur before the end time.</latestarttime>
+        <nameempty>Enter a title</nameempty>
+        <selectedperiod>Selected period:</selectedperiod>
+        <starttimeempty>Enter a start date</starttimeempty>
+        <starttimelabel>Start date:</starttimelabel>
+        <stoptimeempty>Enter an end date </stoptimeempty>
+        <stoptimelabel>End date:</stoptimelabel>
+      </calendar>
+      <calendarlist>
+        <calendaraddnew>Add Calendar</calendaraddnew>
+        <calendaritemfrom>From:</calendaritemfrom>
+        <calendaritemto>To:</calendaritemto>
+        <calendarsectionname>Calendar name</calendarsectionname>
+      </calendarlist>
+      <edit>Edit</edit>
+      <editablecontent>
+        <labeltext>Edit the content and click "Save".</labeltext>
+      </editablecontent>
+      <editdescription>Edit Description</editdescription>
+      <eventlist>
+        <heading>Upcoming events</heading>
+      </eventlist>
+      <filelist>
+        <errormessage>The workroom root folder could not be found or you have insufficient access rights for the folder.</errormessage>
+        <errormissingindex>An index has not been configured for the workroom root folder. An index is required to show the recently changed files.</errormissingindex>
+        <heading>Recent files</heading>
+      </filelist>
+      <membershiplevel>
+        <administer>Administrator</administer>
+        <modify>Participating Member</modify>
+        <read>Read-Only Member</read>
+      </membershiplevel>
+      <membershipmanager>
+        <button>
+          <addmembers>Add members</addmembers>
+          <editmembers>Edit members</editmembers>
+          <invite>Invite</invite>
+          <remove>Remove</remove>
+          <sendinvitation>Send invitation</sendinvitation>
+        </button>
+        <confirmremovemember>Are you sure you want to remove selected members from the workroom?</confirmremovemember>
+        <email>E-mail address</email>
+        <emptysearchresult>Your search didn't return any matching users.</emptysearchresult>
+        <inviteheading>Invite user</inviteheading>
+        <invitemembermessage>Send an e-mail membership invitation to the user.</invitemembermessage>
+        <invitemembership>Status to assign</invitemembership>
+        <inviteunfiledsenderemail>E-mail address is not specified in your profile.</inviteunfiledsenderemail>
+        <invitewithoutstatus>Status to assign is missed.</invitewithoutstatus>
+        <managemembersheading>Manage workroom members</managemembersheading>
+        <membershiplevel>Membership status</membershiplevel>
+        <removeheading>Remove member</removeheading>
+        <searchheading>Search for users</searchheading>
+        <searchresultheading>Search results</searchresultheading>
+        <searchtext>Search</searchtext>
+        <sendinvitationerror>Send invitation error.</sendinvitationerror>
+        <sendinvitationok>Invitation successfully sent.</sendinvitationok>
+        <sendnotifications>Send notifications about membership status change?</sendnotifications>
+        <sendnotificationsno>No</sendnotificationsno>
+        <sendnotificationsyes>Yes</sendnotificationsyes>
+        <status>Assigned status</status>
+        <unabletosendnotification>Some notifications may not be sent.</unabletosendnotification>
+        <username>Username</username>
+        <viewmembersheading>Workroom members</viewmembersheading>
+      </membershipmanager>
+      <newslist>
+        <heading>News</heading>
+        <newssectionname>Newsroom name</newssectionname>
+      </newslist>
+      <newslistpage>
+        <addnewsitem>Add News Item</addnewsitem>
+        <addnewssection>Add Newsroom</addnewssection>
+        <bodylabel>Description:</bodylabel>
+        <createheading>Create News Item</createheading>
+        <deletenewssection>Delete Newsroom</deletenewssection>
+        <editheading>Edit News Item</editheading>
+        <editnewssection>Edit Newsroom</editnewssection>
+        <headinglabel>Title:</headinglabel>
+        <titleempty>Enter a title</titleempty>
+      </newslistpage>
+      <settings>
+        <availablefunctions>Available functions</availablefunctions>
+      </settings>
+      <userprofile>
+        <confirmpassword>Confirm password</confirmpassword>
+        <email>E-mail address</email>
+        <error>
+          <firstnamerequired>Enter a first name</firstnamerequired>
+          <lastnamerequired>Enter a last name</lastnamerequired>
+          <logout>You are logged in as a different user. Log out and try again.</logout>
+          <membership>The current security settings do not allow new users to be registered. Please contact the administrator for additional information.</membership>
+          <passworddiffers>The passwords must be the same</passworddiffers>
+          <passwordrequired>Enter a password</passwordrequired>
+          <passwordweak>The password does not meet the password policy requirements</passwordweak>
+          <unavailable>You do not have access rights to this page.</unavailable>
+          <usernameexists>The username already exists</usernameexists>
+          <usernamerequired>Enter a username</usernamerequired>
+        </error>
+        <firstname>First name</firstname>
+        <lastname>Last name</lastname>
+        <password>Password</password>
+        <role>Role</role>
+        <username>Username</username>
+      </userprofile>
+      <workroomlist>
+        <addworkroom>Add Workroom</addworkroom>
+        <createheading>Create Workroom</createheading>
+        <descriptionlabel>Description:</descriptionlabel>
+        <duplicatename>There is already a workroom with this name.</duplicatename>
+        <nameempty>Enter a name</nameempty>
+        <namelabel>Name:</namelabel>
+        <templateempty>Enter a template</templateempty>
+        <templatelabel>Select template:</templatelabel>
+        <viewheading>My Workrooms</viewheading>
+      </workroomlist>
+    </workroom>
+  </language>
+  <language name="svenska" id="sv">
+    <blog>
+      <item>
+        <comment>Kommentar:</comment>
+        <commentheading>Kommentarer:</commentheading>
+        <commentlegend>Skicka en kommentar</commentlegend>
+        <errormessages>
+          <requiredcomment>Fyll i fältet Kommentar.</requiredcomment>
+          <requiredname>Fyll i fältet Namn.</requiredname>
+        </errormessages>
+        <name>Namn:</name>
+        <permanentlink>Permanent länk</permanentlink>
+        <postedby>av:</postedby>
+        <posteddate>Upplagd datum:</posteddate>
+        <send>Skicka</send>
+        <tags>Taggar:</tags>
+      </item>
+      <itemsummary>
+        <readblog>Läs blogg:</readblog>
+      </itemsummary>
+      <listpage>
+        <dateheading>Blogginlägg upplagda under {0}</dateheading>
+        <errormessage>Ett konfigurationsfel har inträffat. Antingen IsTagListing eller IsDateListing måste vara sant.</errormessage>
+        <tagheading>Blogginlägg taggade med {0}</tagheading>
+      </listpage>
+      <propertyblogtags>
+        <errormessage>
+          <categorytoolong>Minst ett av taggnamnen är för långt. (Max {0} tecken)</categorytoolong>
+        </errormessage>
+        <existingtagsbutton>Lägg till taggar</existingtagsbutton>
+        <existingtagslabel>Befintliga taggar</existingtagslabel>
+        <selectedtagslabel>Valda taggar</selectedtagslabel>
+      </propertyblogtags>
+      <secondarylist>
+        <aboutme>Om mig</aboutme>
+        <archive>Arkiv</archive>
+        <tagcloud>Taggmoln</tagcloud>
+      </secondarylist>
+      <tagstatisticsupdater>
+        <description>Används för att uppdatera bloggtaggstatistiken.</description>
+        <displayname>Uppdatera taggstatistiken</displayname>
+      </tagstatisticsupdater>
+    </blog>
+    <calendar>
+      <noeventonday>Inga händelser har planerats för den här dagen</noeventonday>
+      <selectedperiod>Vald period</selectedperiod>
+    </calendar>
+    <captcha>
+      <errormessage>Den inmatade texten matchar inte texten på bilden.</errormessage>
+      <heading>Användarverifiering</heading>
+      <imagealternativetext>Bild för användarverifiering</imagealternativetext>
+      <label>Ange den text som visas i bilden:</label>
+    </captcha>
+    <common>
+      <messages>
+        <confirmdelete>Är du säker på att du vill ta bort det här objektet?</confirmdelete>
+      </messages>
+    </common>
+    <document>
+      <download>Ladda ner:</download>
+    </document>
+    <dynamiccontenttypes>
+      <dynamiccontent name="MapDynamicContentDemo">
+        <caption>Google Maps</caption>
+        <description>Lägg till och konfigurera Google Maps</description>
+      </dynamiccontent>
+    </dynamiccontenttypes>
+    <editorstyleoptions>
+      <classic>Klassisk</classic>
+      <heading_1>Rubrik 1</heading_1>
+      <heading_2>Rubrik 2</heading_2>
+      <heading_3>Rubrik 3</heading_3>
+      <highlighted>Markerad</highlighted>
+      <image_border>Bildkant</image_border>
+      <image_styles>Bildformat</image_styles>
+      <introduction>Inledning</introduction>
+      <left_aligned>Vänsterjusterad</left_aligned>
+      <paragraph>Stycke</paragraph>
+      <right_aligned>Högerjusterad</right_aligned>
+      <table_styles>Tabellformat</table_styles>
+      <top_left>Högst upp till vänster</top_left>
+      <top_right>Högst upp till höger</top_right>
+    </editorstyleoptions>
+    <error>
+      <document>Sidegenskapen "Document path" är inte angiven.</document>
+      <mainmenucontainer>Den dynamiska egenskapen "MainMenuContainer" är inte angiven.</mainmenucontainer>
+    </error>
+    <filemanager>
+      <button>
+        <back>Tillbaka</back>
+        <deleteversion>Ta bort version</deleteversion>
+        <rename>Ändra namn</rename>
+        <replacefile>Ersätt fil</replacefile>
+        <restore>Återställ till den här versionen</restore>
+        <upload>Ladda upp</upload>
+      </button>
+      <choosefile>Välj fil:</choosefile>
+      <deletefilesandfoldersheading>Ta bort filer/kataloger</deletefilesandfoldersheading>
+      <disabledfunctions>Vissa funktioner är inte tillgängliga på grund av att rättigheterna till den här katalogen är otillräckliga.</disabledfunctions>
+      <editfilesummaryheading>Redigera filinformation</editfilesummaryheading>
+      <errormessage>
+        <cannotchange>Det gick inte att flytta, byta namn på, ta bort eller uppdatera den valda filen. Den här filen kan vara utcheckad av någon annan.</cannotchange>
+        <checkedout>Det finns redan en fil med samma namn och den är utcheckad av någon annan.</checkedout>
+        <containscheckedout>Det gick inte att flytta eller ta bort den valda katalogen. Den här katalogen kan innehålla en fil som är utcheckad av någon annan.</containscheckedout>
+        <insufficientaccess>Du har inte tillräckliga rättigheter för att skapa eller ändra filer i den här katalogen.</insufficientaccess>
+        <insufficientaccesscreatefolder>Du har inte tillräckliga rättigheter för att skapa kataloger på den här platsen.</insufficientaccesscreatefolder>
+        <insufficientaccessmetadata>Du har inte tillräckliga rättigheter för att ändra den här filen.</insufficientaccessmetadata>
+        <insufficientaccessmove>Du har inte tillräckliga rättigheter för att flytta det här objektet.</insufficientaccessmove>
+        <insufficientaccessremove>Du har inte tillräckliga rättigheter för att ta bort det valda objektet.</insufficientaccessremove>
+        <insufficientaccessrename>Du har inte tillräckliga rättigheter för att byta namn på det valda objektet.</insufficientaccessrename>
+        <readonlyfile>Det finns redan en skrivskyddad fil med samma namn.</readonlyfile>
+        <replacefile>Det finns redan en fil med samma namn. Vill du ersätta filen {0}?</replacefile>
+        <versionisnotfound>Det gick inte att utföra operationen. Det gick inte att hitta version {0}.</versionisnotfound>
+      </errormessage>
+      <filecomment>Kommentar:</filecomment>
+      <filelistheading>
+        <checkedout>Utcheckad</checkedout>
+        <lastchanged>Senast ändrad</lastchanged>
+        <name>Namn</name>
+        <size>Storlek</size>
+      </filelistheading>
+      <filename>Filnamn</filename>
+      <files>Filer</files>
+      <filesummary>
+        <author>Skribent</author>
+        <category>Kategori</category>
+        <comments>Kommentarer</comments>
+        <keywords>Nyckelord</keywords>
+        <subject>Beskrivning</subject>
+        <title>Titel</title>
+      </filesummary>
+      <filesummaryheading>Filinformation för</filesummaryheading>
+      <foldername>Katalogens namn:</foldername>
+      <foldernotempty>Katalogen är inte tom</foldernotempty>
+      <foldernotemptywarning>Vissa av katalogerna är inte tomma. Allt innehåll i katalogerna kommer att tas bort.</foldernotemptywarning>
+      <folders>Kataloger</folders>
+      <maxuploadmessage>Filen som ska laddas upp får inte vara större än {0}.</maxuploadmessage>
+      <missingfoldererror>Det gick inte att skapa filen. Antingen saknas en målkatalog eller så saknar du behörighet att skapa filer i den angivna katalogen.</missingfoldererror>
+      <newfolder>Ny katalog</newfolder>
+      <parentfolder>Överordnad katalog</parentfolder>
+      <renamefile>Ändra namn på fil</renamefile>
+      <renamefolder>Ändra namn på katalog</renamefolder>
+      <selectfilemessage>Välj en fil med knappen Bläddra nedan och klicka sedan på "Ladda upp".</selectfilemessage>
+      <switchview>
+        <addfile>Lägg till fil</addfile>
+        <addfolder>Lägg till katalog</addfolder>
+        <checkin>Checka in</checkin>
+        <checkout>Checka ut</checkout>
+        <copy>Kopiera</copy>
+        <cut>Klipp ut</cut>
+        <delete>Ta bort</delete>
+        <details>Information</details>
+        <paste>Klistra in</paste>
+        <rename>Ändra namn</rename>
+        <undocheckout>Ångra</undocheckout>
+        <version>Version</version>
+        <view>Visa</view>
+      </switchview>
+      <uploadbutton>Ladda upp</uploadbutton>
+      <uploadheading>Filuppladdning</uploadheading>
+      <validation>
+        <folderexists>Det finns redan en katalog eller fil med samma namn.</folderexists>
+        <folderwithsamename>Det finns redan en katalog med namnet '{0}' i den aktuella katalogen.</folderwithsamename>
+        <illigalchar>Namnet får inte innehålla /, ?, &lt;, &gt;, \, :, *, |, # eller ".</illigalchar>
+        <nametolong>Katalognamnet får inte vara längre än 255 tecken.</nametolong>
+        <requiredfile>Välj en fil.</requiredfile>
+        <requiredname>Ange ett namn.</requiredname>
+      </validation>
+      <versionfileheading>Versioner för</versionfileheading>
+      <versionlistheading>
+        <comments>Kommentarer</comments>
+        <created>Skapad</created>
+        <createdby>Skapad av</createdby>
+        <size>Storlek</size>
+        <version>Version</version>
+      </versionlistheading>
+    </filemanager>
+    <filemanagernavigator>
+      <virtualpathroots>
+        <virtualpathroot name="Documents">
+          <name>Dokument</name>
+        </virtualpathroot>
+        <virtualpathroot name="Global Files">
+          <name>Globala filer</name>
+        </virtualpathroot>
+      </virtualpathroots>
+    </filemanagernavigator>
+    <form>
+      <numberofvotes>Röster: {0}</numberofvotes>
+      <postedmessage>Tack för din röst!</postedmessage>
+      <showform>Till formuläret</showform>
+      <showstat>Visa statistik</showstat>
+    </form>
+    <forum>
+      <forumform>
+        <allowforumslabel>Tillåt forum:</allowforumslabel>
+        <allowthreadslabel>Tillåt trådar:</allowthreadslabel>
+        <createbutton>Skapa forum</createbutton>
+        <heading>Skapa forum</heading>
+        <icondropdown>
+          <auction>Auktion</auction>
+          <default>Standard</default>
+          <information>Information</information>
+        </icondropdown>
+        <iconlabel>Ikon:</iconlabel>
+        <titleerror>Du måste fylla i titel</titleerror>
+        <titlelabel>Titel:</titlelabel>
+      </forumform>
+      <forumlist>
+        <createbutton>Lägg till underforum</createbutton>
+        <deleteforumbutton>Ta bort detta forum</deleteforumbutton>
+        <heading>Underforum</heading>
+        <setupbutton>Konfigurera automatiskt</setupbutton>
+        <setuperror>Sidan är inte korrekt inställd. Kontrollera inställningarna.</setuperror>
+        <title>Forum</title>
+        <updated>Senast uppdaterade tråd</updated>
+      </forumlist>
+      <thread>
+        <addreply>Lägg till svar</addreply>
+        <deletereply>Ta bort svar</deletereply>
+        <deletethread>Ta bort tråd</deletethread>
+        <lock>Lås tråd</lock>
+        <postedby>Upplagd av:</postedby>
+        <reply>Svar</reply>
+        <replyempty>Du måste fylla i svaret</replyempty>
+        <sticky>Gör tråd sticky</sticky>
+        <toforum>Till forum</toforum>
+        <unlock>Lås upp tråd</unlock>
+        <unsticky>Gör tråd ej sticky</unsticky>
+      </thread>
+      <threadform>
+        <contenterror>Du måste fylla i texten</contenterror>
+        <contentlabel>Text:</contentlabel>
+        <createbutton>Skapa tråd</createbutton>
+        <heading>Skapa tråd</heading>
+        <titleerror>Du måste fylla i titel</titleerror>
+        <titlelabel>Titel:</titlelabel>
+      </threadform>
+      <threadlist>
+        <createbutton>Lägg till tråd</createbutton>
+        <createdby>Skapad av</createdby>
+        <heading>Trådar</heading>
+        <replies>Svar</replies>
+        <title>Tråd</title>
+        <updated>Senast uppdaterad</updated>
+      </threadlist>
+      <today>I dag</today>
+      <Yesterday>I går</Yesterday>
+    </forum>
+    <headings>
+      <heading name="Flash Content">
+        <description>Flash-innehåll</description>
+      </heading>
+      <heading name="Listings">
+        <description>Listningar</description>
+      </heading>
+      <heading name="News &amp; Calendar">
+        <description>Nyheter och Kalender</description>
+      </heading>
+      <heading name="SiteConfiguration">
+        <description>Sajt-inställningar</description>
+      </heading>
+    </headings>
+    <login>
+      <becomemember>Registrera</becomemember>
+      <currentuser>Aktuell användare:</currentuser>
+      <editdetails>Mina inställningar</editdetails>
+      <email>Skriv din e-postadress:</email>
+      <error>
+        <loginfail>Inloggningen misslyckades. Lösenord eller användarnamn stämde inte.</loginfail>
+        <password>Du måste ange lösenord</password>
+        <username>Du måste ange användarnamn</username>
+      </error>
+      <forgotpassword>Glömt ditt lösenord?</forgotpassword>
+      <login>Logga in</login>
+      <logout>Logga ut</logout>
+      <password>Lösenord</password>
+    </login>
+    <navigation>
+      <help>Hjälp</help>
+      <listen>Lyssna</listen>
+      <readmore>Läs mer</readmore>
+      <search>Sök</search>
+      <skipnavigation>Gå till innehåll</skipnavigation>
+      <startpage>Start</startpage>
+      <startpagelinktitle>To start page</startpagelinktitle>
+    </navigation>
+    <news>
+      <morenews>Fler nyheter</morenews>
+      <publishdate>Publicerad</publishdate>
+      <writername>Skribent</writername>
+    </news>
+    <pagetypes>
+      <common>
+        <property name="AboutTheSite">
+          <caption>Länklista för Om webbplatsen (sidfot)</caption>
+          <help>Lista över länkar för Om webbplatsen som visas i sidfoten</help>
+        </property>
+        <property name="AboutTheSiteHeading">
+          <caption>Rubriken Om webbplatsen (sidfot)</caption>
+          <help>Rubrik för länkarna Om webbplatsen som visas i sidfoten</help>
+        </property>
+        <property name="ActiveThreadContainer">
+          <caption>Behållare för aktiva trådar</caption>
+          <help>Behållaren för de aktiva trådarna i detta forum.</help>
+        </property>
+        <property name="Address1">
+          <caption>Adress1</caption>
+          <help>Adress1</help>
+        </property>
+        <property name="Address2">
+          <caption>Adress2</caption>
+          <help>Adress2</help>
+        </property>
+        <property name="Address3">
+          <caption>Adress3</caption>
+          <help>Adress3</help>
+        </property>
+        <property name="AllowForums">
+          <caption>Tillåt underforum i detta forum</caption>
+          <help>Ange om det har forumet kan innehålla underforum eller inte.</help>
+        </property>
+        <property name="AllowThreads">
+          <caption>Tillåt trådar i detta forum</caption>
+          <help>Ange om det har forumet kan innehålla trådar eller inte.</help>
+        </property>
+        <property name="ArchiveThreadContainer">
+          <caption>Behållare för arkiverade trådar</caption>
+          <help>Behållaren för de arkiverade trådarna i detta forum.</help>
+        </property>
+        <property name="Author">
+          <caption>Skribent</caption>
+          <help>Ange skribentens namn</help>
+        </property>
+        <property name="BlogStart">
+          <caption>Bloggstartsida</caption>
+          <help>Startsidan för den blogg som detta bloggobjekt tillhör.</help>
+        </property>
+        <property name="CalendarContainer">
+          <caption>Visa kalender från</caption>
+          <help>Ange varifrån i trädstrukturen som kalenderhändelserna ska visas. Om alla dina händelser är undersidor till den här sidan ska du välja "Den här sidan".</help>
+        </property>
+        <property name="CalendarItemContainer">
+          <caption>Start för kalender</caption>
+          <help>Visa kalenderhändelser från den här sidan.</help>
+        </property>
+        <property name="ClientsArea">
+          <caption>Klientområde</caption>
+          <help>Innehållet i det här fältet kommer att visas i den breda rutan. Du kan använda både text och bild i layouten. Observera att bilderna inte får vara större än rutan.</help>
+        </property>
+        <property name="CommentPageTypeName">
+          <caption>Sidtyp för bloggkommentar</caption>
+          <help>Sidtyp för bloggkommentar</help>
+        </property>
+        <property name="CompanyName">
+          <caption>Företagsnamn</caption>
+          <help>Namnet på företaget</help>
+        </property>
+        <property name="ConfirmationMessage">
+          <caption>E-postmeddelande vid bekräftelse</caption>
+          <help>Ange en text som skickas i e-postmeddelande vid lyckad registrering</help>
+        </property>
+        <property name="ContactName">
+          <caption>Kontaktens namn</caption>
+          <help>Kontaktens namn</help>
+        </property>
+        <property name="ContactPage">
+          <caption>Kontaktsida</caption>
+          <help>Länk till sida med kontaktinformation</help>
+        </property>
+        <property name="Country">
+          <caption>Land</caption>
+          <help>Land</help>
+        </property>
+        <property name="CountryPresence">
+          <caption>Närvaro i följande länder</caption>
+          <help>Närvaro i följande länder</help>
+        </property>
+        <property name="DateContainer">
+          <caption>Behållare för datumsidor</caption>
+          <help>Bör ställas in automatiskt.</help>
+        </property>
+        <property name="Description">
+          <caption>Rubrik för RSS-källa</caption>
+          <help>Ange en rubrik för RSS-källa </help>
+        </property>
+        <property name="Details">
+          <caption>Personlig information</caption>
+          <help>Ange en kort beskrivning av bloggaren.</help>
+        </property>
+        <property name="DisableAnonymousComments">
+          <caption>Avvisa kommentarer från anonyma användare</caption>
+          <help>Ange om anonyma användare ska få lägga upp kommentarer till blogginlägg.</help>
+        </property>
+        <property name="DisableCompany">
+          <caption>Det är inte tillåtet att redigera företag</caption>
+          <help>Det är inte tillåtet att redigera företag</help>
+        </property>
+        <property name="DisableCountry">
+          <caption>Det är inte tillåtet att redigera land</caption>
+          <help>Det är inte tillåtet att redigera land</help>
+        </property>
+        <property name="DisableEmail">
+          <caption>Det är inte tillåtet att redigera e-post</caption>
+          <help>Det är inte tillåtet att redigera e-post</help>
+        </property>
+        <property name="DisableFirstname">
+          <caption>Det är inte tillåtet att redigera förnamn</caption>
+          <help>Det är inte tillåtet att redigera förnamn</help>
+        </property>
+        <property name="DisableLanguage">
+          <caption>Det är inte tillåtet att redigera språk</caption>
+          <help>Det är inte tillåtet att redigera språk</help>
+        </property>
+        <property name="DisableLastname">
+          <caption>Det är inte tillåtet att redigera efternamn</caption>
+          <help>Det är inte tillåtet att redigera efternamn</help>
+        </property>
+        <property name="DisableTitle">
+          <caption>Det är inte tillåtet att redigera titel</caption>
+          <help>Det är inte tillåtet att redigera titel</help>
+        </property>
+        <property name="DisplayDate">
+          <caption>Visa datum i huvudlistan</caption>
+          <help>Visa datum för varje objekt</help>
+        </property>
+        <property name="DisplayDocumentLink">
+          <caption>Visa dokumentlänk i huvudlistan</caption>
+          <help>Visa dokumentlänk i huvudlistan</help>
+        </property>
+        <property name="DocumentInternalPath">
+          <caption>Dokumentsökväg</caption>
+          <help>Sökväg till dokument</help>
+        </property>
+        <property name="DocumentListRoot">
+          <caption>Startsida för dokumentlista</caption>
+          <help>Ange en föräldersida där dokumentlista ska hämtas. Om ingen sida är angiven visas ingen lista.</help>
+        </property>
+        <property name="DocumentPath">
+          <caption>Sökväg till Dokument</caption>
+          <help>Ange en sökväg till dokument som ska visas</help>
+        </property>
+        <property name="Email">
+          <caption>E-postadress</caption>
+          <help>E-postadress</help>
+        </property>
+        <property name="EmailBody">
+          <caption>Innehåll i e-postmeddelande</caption>
+          <help>Textinnehåll i e-posmeddelande som skickas till användaren</help>
+        </property>
+        <property name="EmailSender">
+          <caption>Avsändare för e-postmeddelande</caption>
+          <help>Ange adress som ska vara avsändare på e-postmeddelande som skickas</help>
+        </property>
+        <property name="EmailSubject">
+          <caption>Ämnesrad för e-postmeddelande</caption>
+          <help>Titel på e-postmeddelande som skickas</help>
+        </property>
+        <property name="EmbeddedObjectHeight">
+          <caption>Höjd på flashfilm</caption>
+          <help>Ange höjd på flashfilm i pixar</help>
+        </property>
+        <property name="EmbeddedObjectWidth">
+          <caption>Bredd på flashfilm</caption>
+          <help>Ange bredd på flashfilm i pixlar</help>
+        </property>
+        <property name="EmbeddedURL">
+          <caption>Sökväg till flashfilm</caption>
+          <help>Ange en adress till flashfilmen som ska visas</help>
+        </property>
+        <property name="EnableStatistics">
+          <caption>		Visa statistik på sidmallen</caption>
+          <help>			Visar resultatet av postningar för besökaren</help>
+        </property>
+        <property name="EPiWebSites">
+          <caption>EPiServer-webbsidelista (sidfot)</caption>
+          <help>Lista över EPiServer-webbplatser som visas i sidfoten</help>
+        </property>
+        <property name="EPiWebSitesHeading">
+          <caption>EPiServer-webbsiderubrik (sidfot)</caption>
+          <help>Rubrik för EPiServer-webbplatserna som visas i sidfoten</help>
+        </property>
+        <property name="EPSUBSCRIBE">
+          <caption>Aktivera prenumeration</caption>
+          <help>Aktivera prenumeration för den här sidan</help>
+        </property>
+        <property name="EPSUBSCRIBE-EXCLUDE">
+          <caption>Blockera prenumeration för denna sida</caption>
+          <help>Markera denna ruta för att blockera prenumerationsutskick för den här sidan</help>
+        </property>
+        <property name="EPSUBSCRIBEHIDDEN">
+          <caption>Visa inte på prenumerationssidan</caption>
+          <help>Hides this page on the subscriptions page</help>
+        </property>
+        <property name="EPSUBSCRIBE-ROOT">
+          <caption>Startsida för prenumeration</caption>
+          <help>Ange en sida som ska vara första sidan som prenumeraitonsfunktionen använder för utskick</help>
+        </property>
+        <property name="EventsCount">
+          <caption>Antal händelser</caption>
+          <help>Ange ett heltal för de antal händelser som ska visas</help>
+        </property>
+        <property name="EventsRoot">
+          <caption>Hämta kalenderlistning från</caption>
+          <help>Ange en föräldersida som är startsida för kalender</help>
+        </property>
+        <property name="EventStartDate">
+          <caption>Startdatum</caption>
+          <help>Ange startdatum för aktiviteten.</help>
+        </property>
+        <property name="EventStopDate">
+          <caption>Slutdatum</caption>
+          <help>Ange slutdatum för aktiviteten.</help>
+        </property>
+        <property name="FallbackImage">
+          <caption>Reservbild</caption>
+          <help>Bild som visas när flash inte är tillgängligt</help>
+        </property>
+        <property name="FeedCount">
+          <caption>Antal objekt i en feed.</caption>
+          <help>Antal objekt som ska skickas ut i en RSS/Atom-feed.</help>
+        </property>
+        <property name="ForumPageTypeName">
+          <caption>Sidtyp för forum</caption>
+          <help>Sidtyp för forum</help>
+        </property>
+        <property name="ForumStart">
+          <caption>Startsida för forum</caption>
+          <help>Startsidan för det forum som detta forumobjekt tillhör.</help>
+        </property>
+        <property name="Heading">
+          <caption>Rubrik på sidan</caption>
+          <help>Rubrik på sidan. Om detta fält lämnas tomt kommer sidan namn att visas som rubrik på sidan istället.</help>
+        </property>
+        <property name="HistoryLength">
+          <caption>Högsta ålder för listade objekt</caption>
+          <help>Högsta ålder i dagar för de objekt som ska visas i listan.</help>
+        </property>
+        <property name="Icon">
+          <caption>Ikonen för det här forumet</caption>
+          <help>Namnet på den ikon som detta forum ska använda.</help>
+        </property>
+        <property name="Image">
+          <caption>Konceptbild </caption>
+          <help>Ange en sökväg till bild som ska visas på startsidan (900*341 pixlar)</help>
+        </property>
+        <property name="Image1">
+          <caption>Bild 1</caption>
+          <help>Bild som visas i flash</help>
+        </property>
+        <property name="Image2">
+          <caption>Bild 2</caption>
+          <help>Bild som visas i flash</help>
+        </property>
+        <property name="Image3">
+          <caption>Bild 3</caption>
+          <help>Bild som visas i flash</help>
+        </property>
+        <property name="Image4">
+          <caption>Bild 4</caption>
+          <help>Bild som visas i flash</help>
+        </property>
+        <property name="Image5">
+          <caption>Bild 5</caption>
+          <help>Bild som visas i flash</help>
+        </property>
+        <property name="IndexContainer">
+          <caption>Visa innehåll från sida</caption>
+          <help>Ange vilken sida som innehållsförteckningen ska starta på.</help>
+        </property>
+        <property name="IndexRoot">
+          <caption>Hämta webbkarta från</caption>
+          <help>Ange en sidan från vilken webbkarta ska skapa innehåll</help>
+        </property>
+        <property name="IsDateListing">
+          <caption>Datumlistning</caption>
+          <help>Bör ställas in automatiskt.</help>
+        </property>
+        <property name="IsDocumentPageType">
+          <caption>Ladda upp fullständig HTML-version samt källdokument</caption>
+          <help>Markera detta alternativ för att kunna visa den fullständiga HTML-versionen</help>
+        </property>
+        <property name="IsLocked">
+          <caption>Tråden är låst</caption>
+          <help>Anger om den här tråden är låst eller inte.</help>
+        </property>
+        <property name="IsTagListing">
+          <caption>Tagglistning</caption>
+          <help>Bör ställas in automatiskt.</help>
+        </property>
+        <property name="IsTeamLevel">
+          <caption>Teamnivå</caption>
+          <help>Bör ställas in automatiskt.</help>
+        </property>
+        <property name="ItemPageTypeName">
+          <caption>Bloggsidtyp</caption>
+          <help>Den bloggsidtyp som ska användas</help>
+        </property>
+        <property name="ListCount">
+          <caption>Visa antal sidor i huvudlistan</caption>
+          <help>Ange hur många sidor som ska visas i listningen</help>
+        </property>
+        <property name="ListingSlideContainer">
+          <caption>Hämta bildspel från</caption>
+          <help>Välj den sida som du vill hämta ett bildspel från.</help>
+        </property>
+        <property name="ListingSlideCount">
+          <caption>Visa antal sidor i bildspel</caption>
+          <help>Ange med ett heltal hur många sidor som ska visas i bildspelet.</help>
+        </property>
+        <property name="ListPageTypeName">
+          <caption>Sidtyp för blogglista</caption>
+          <help>Sidtyp för blogglista</help>
+        </property>
+        <property name="ListRoot">
+          <caption>Hämta huvudlistning från</caption>
+          <help>Ange den sida som du vill hämta listningen från. Listan kommer att visas i huvudinnehållsområdet. Om det inte ställts in kommer sidlistan inte att visas.</help>
+        </property>
+        <property name="Location">
+          <caption>Visa platsen för en händelse</caption>
+          <help>Välj en plats för den här händelsen</help>
+        </property>
+        <property name="LoginPage">
+          <caption>Inloggningssida</caption>
+          <help>Sida för inloggning för del av webbplatsen</help>
+        </property>
+        <property name="Logotype">
+          <caption>Logotyp</caption>
+          <help>Sökvägen till bild som ska användas som logotyp på webbplatsen</help>
+        </property>
+        <property name="MainBody">
+          <caption>Primärt innehåll</caption>
+          <help>Primärt innehåll kommer att visas i huvuddelen på sidan. Du kan skriva text, infoga bilder, skapa länkar m.m.</help>
+        </property>
+        <property name="MainIntro">
+          <caption>Puff-text</caption>
+          <help>Ange en lockande text om sidan som endast visas i listning</help>
+        </property>
+        <property name="MainLinksCount">
+          <caption>Visa antalet länkar</caption>
+          <help>Ange hur många länkar som ska visas i listningen.</help>
+        </property>
+        <property name="MainLinksHeading">
+          <caption>Rubrik för huvudlistan</caption>
+          <help>Rubriktext för huvudlänklistan</help>
+        </property>
+        <property name="MainLinksRoot">
+          <caption>Hämta vänsterlistning från</caption>
+          <help>Ange den sida som du vill hämta listningen från.</help>
+        </property>
+        <property name="MainListCount">
+          <caption>Antal sidor i lista</caption>
+          <help>Ange med ett heltal hur många sidor som ska visas i lista</help>
+        </property>
+        <property name="MainListRoot">
+          <caption>Hämta listning från</caption>
+          <help>Ange en föräldersida som ska vara startsida för listning. Om inget värde anges kommer ingen lista att visas. </help>
+        </property>
+        <property name="MainMenuContainer">
+          <caption>Visa menyer från</caption>
+          <help>Ange en plats i menyträdet från vilken sida du vill visa menyer på vald sida</help>
+        </property>
+        <property name="MaxCount">
+          <caption>Max. antal inlägg</caption>
+          <help>Högsta antal inlägg som visas i listan.</help>
+        </property>
+        <property name="MetaAuthor">
+          <caption>Skribent</caption>
+          <help>Ange vem som ska stå som författare för texten som används av sökmotorer. Om inget värde ange på sidan kommer dynamisk egenskap användas istället. </help>
+        </property>
+        <property name="MetaDescription">
+          <caption>Beskrivning av sidan</caption>
+          <help>Ange en kortfattad beskrivning av sidans innehåll</help>
+        </property>
+        <property name="MetaKeywords">
+          <caption>Standardsökord för sidor</caption>
+          <help>Ange en kommaseparerad lista av sökord som matchar den här sidan</help>
+        </property>
+        <property name="nDaysToRender">
+          <caption>Visa antal dagar i kalendern</caption>
+          <help>Ange hur många dagar som ska visas i kalendern.</help>
+        </property>
+        <property name="NewsCount">
+          <caption>Antal nyheter</caption>
+          <help>Ange ett heltal för de antal nyheter som ska visas</help>
+        </property>
+        <property name="NewsRoot">
+          <caption>Hämta nyhetslistning från</caption>
+          <help>Ange en föräldersida som är startsida för nyheter</help>
+        </property>
+        <property name="NoEmployees">
+          <caption>Antal anställda</caption>
+          <help>Antal anställda</help>
+        </property>
+        <property name="NumberOfReplies">
+          <caption>Antal svar</caption>
+          <help>Det antal svar som lämnats i den här tråden.</help>
+        </property>
+        <property name="OtherWebSites">
+          <caption>Lista över andra webbplatser (sidfot)</caption>
+          <help>Lista över de andra webbplatserna som visas i sidfoten</help>
+        </property>
+        <property name="OtherWebSitesHeading">
+          <caption>Rubrik för andra webbplatser (sidfot)</caption>
+          <help>Rubrik för de andra webbplatserna som visas i sidfoten</help>
+        </property>
+        <property name="PasswordChangeSuccessBody">
+          <caption>Lyckad ändring av lösenord</caption>
+          <help>Textmeddelande som visas vid lyckad ändring av lösenord</help>
+        </property>
+        <property name="PasswordLength">
+          <caption>Längd på lösenord</caption>
+          <help>Minsta tillåtna längd på lösenord</help>
+        </property>
+        <property name="PersonalStartPageTypeName">
+          <caption>Startsidtyp för bloggperson</caption>
+          <help>Startsidtyp för bloggperson som ska användas för bloggning</help>
+        </property>
+        <property name="Phone">
+          <caption>Telefon</caption>
+          <help>Telefon</help>
+        </property>
+        <property name="PostPageTypeName">
+          <caption>Sidtyp för forumpost</caption>
+          <help>Sidtyp för forumpost</help>
+        </property>
+        <property name="PrivacyPage">
+          <caption>Integritets-sida</caption>
+          <help>Länk till sidan om integritet</help>
+        </property>
+        <property name="RecentContainer">
+          <caption>Visa sidor från</caption>
+          <help>Ange från vilken sida du vill visa de nyligen ändrade sidorna.</help>
+        </property>
+        <property name="RecentHours">
+          <caption>Visa sidor som ändrats de senaste X timmarna</caption>
+          <help>Ange hur många timmar tillbaka i tiden som du vill visa ändrade sidor.</help>
+        </property>
+        <property name="RefreshRate">
+          <caption>Antal sekunder som varje sida skall visas</caption>
+          <help>Ange hur många sekunder varje sida ska visas i bildspelet.</help>
+        </property>
+        <property name="RelatedSites">
+          <caption>Lista över relaterade webbplatser (sidfot)</caption>
+          <help>Lista över de relaterade webbplatserna som visas i sidfoten</help>
+        </property>
+        <property name="RelatedSitesHeading">
+          <caption>Rubrik för relaterade webbplatser (sidfot)</caption>
+          <help>Rubrik för de relaterade webbplatserna som visas i sidfoten</help>
+        </property>
+        <property name="ResellerDescription">
+          <caption>Beskrivning</caption>
+          <help>Beskrivning</help>
+        </property>
+        <property name="ResellerID">
+          <caption>Återförsäljar-ID</caption>
+          <help>Återförsäljar-ID</help>
+        </property>
+        <property name="RootFolder">
+          <caption>Sökväg till katalog som ska visas</caption>
+          <help>Ange en sökvägen till den katalog som ska visas</help>
+        </property>
+        <property name="RssContainer">
+          <caption>Huvudsida för RSS</caption>
+          <help>Ange en föräldersida som är startsida för alla RSS-källor</help>
+        </property>
+        <property name="RssSource">
+          <caption>Sida för RSS-källa</caption>
+          <help>Ange en sida som ska vara huvudsida för RSS-källor från webbplatsen</help>
+        </property>
+        <property name="RssUrl">
+          <caption>Sökväg till RSS-källa</caption>
+          <help>Ange en adress till innehåll i RSS-format. Det är vanligen en internetadress.</help>
+        </property>
+        <property name="SearchPage">
+          <caption>Söksida</caption>
+          <help>Länk till söksida som används av snabbsök</help>
+        </property>
+        <property name="SearchRoot">
+          <caption>Startsida för sökning</caption>
+          <help>Ange från vilken sida sökfunktionen ska starta sökningen</help>
+        </property>
+        <property name="SecondaryBody">
+          <caption>Sekundärt innehåll</caption>
+          <help>Sekundärt innehåll kommer att visas i huvuddelen på sidan. Du kan skriva text, infoga bilder, skapa länkar m.m.</help>
+        </property>
+        <property name="SecondaryLinksCount">
+          <caption>Visa antalet länkar</caption>
+          <help>Ange hur många länkar som ska visas i listningen.</help>
+        </property>
+        <property name="SecondaryLinksDisplayDate">
+          <caption>Visa datum för varje objekt i den sekundära listan</caption>
+          <help>Anger om datum ska visas varje listobjekt</help>
+        </property>
+        <property name="SecondaryLinksHeading">
+          <caption>Rubrik för den sekundära listan</caption>
+          <help>Rubriktext för den sekundära länklistan</help>
+        </property>
+        <property name="SecondaryLinksRoot">
+          <caption>Hämta högerlistning från</caption>
+          <help>Ange den sida som du vill hämta listningen från.</help>
+        </property>
+        <property name="SecondaryListCount">
+          <caption>Antal sidor i lista för andra listan</caption>
+          <help>Ange hur många sidor som ska visas i andra listan</help>
+        </property>
+        <property name="SecondaryListDisplayDate">
+          <caption>Visa datum i den sekundära listan</caption>
+          <help>Visa datum för varje objekt</help>
+        </property>
+        <property name="SecondaryListHeading">
+          <caption>Rubrik för den sekundära listan</caption>
+          <help>Rubrik för den sekundära listan</help>
+        </property>
+        <property name="SecondaryListRoot">
+          <caption>Hämta andra listning från</caption>
+          <help>Ange en föräldersida som ska vara startsida för sekundär listning. Om inget värde anges kommer ingen lista att visas.  </help>
+        </property>
+        <property name="SelectedWebPart">
+          <caption>Välj webbdel</caption>
+          <help>Väljer vilken webbdel som ska användas på sidan</help>
+        </property>
+        <property name="SEODescription">
+          <caption>Sidbeskrivning</caption>
+          <help>Beskrivning av sidan</help>
+        </property>
+        <property name="SEORobots">
+          <caption>Sökrobotar</caption>
+          <help>Ange hur sökrobotar ska hantera sidan</help>
+        </property>
+        <property name="SEOTitle">
+          <caption>Sidtitel</caption>
+          <help>Titeln på sidan</help>
+        </property>
+        <property name="SitemapPage">
+          <caption>Webbkarta</caption>
+          <help>Länk till webbkarta</help>
+        </property>
+        <property name="SortFilesBy">
+          <caption>Sortera filer efter</caption>
+          <help>Ange hur filer ska sorteras vid visning på sidan</help>
+        </property>
+        <property name="Speaker">
+          <caption>Visa talaren för en händelse</caption>
+          <help>Välj en talare för den här händelsen</help>
+        </property>
+        <property name="StickyThreadContainer">
+          <caption>Behållare för sticky-trådar</caption>
+          <help>Behållaren för sticky-trådarna i detta forum.</help>
+        </property>
+        <property name="SubscriptionMailBody">
+          <caption>Introduktionstext till prenumerationsutskick</caption>
+          <help>Ange texten som du vill inleda ditt prenumerations e-postmeddelande med. Meddelandet skickas ut till alla prenumeranter via e-post.</help>
+        </property>
+        <property name="SubscriptionMailFrom">
+          <caption>Avsändaradress för prenumerationsutskick</caption>
+          <help>E-postadressen som ska stå som avsändare på de e-postmeddelanden som skickas med prenumerationen.</help>
+        </property>
+        <property name="SubscriptionMailReadMore">
+          <caption>Text i prenumerationsutskick för länkar till sidor</caption>
+          <help>Denna text kommer att fungera som länk som användaren kan klicka på i prenumerationsmeddelanden.</help>
+        </property>
+        <property name="SubscriptionMailSubject">
+          <caption>Ämnesrad för prenumerationsutskick</caption>
+          <help>Det som anges här kommer att som ämne på prenumerationsutskicken.</help>
+        </property>
+        <property name="SummaryLength">
+          <caption>Längd på sammanfattningen</caption>
+          <help>Längden på sammanfattningen för varje listobjekt</help>
+        </property>
+        <property name="SummaryTextLength">
+          <caption>Längd på textsammanfattningen</caption>
+          <help>Antal tecken som ska användas för att förkorta sammanfattningen.</help>
+        </property>
+        <property name="TagCloudValue">
+          <caption>Taggmolnsvärde</caption>
+          <help>Bör ställas in automatiskt.</help>
+        </property>
+        <property name="TagContainer">
+          <caption>Behållare för taggsidor</caption>
+          <help>Bör ställas in automatiskt.</help>
+        </property>
+        <property name="Tags">
+          <caption>Taggar</caption>
+          <help>Mata in en kommaseparerad lista och/eller lägg till från befintliga taggar.</help>
+        </property>
+        <property name="TeamStartPageTypeName">
+          <caption>Startsidtyp för bloggteam</caption>
+          <help>Startsidtyp för bloggteam som ska användas för bloggning</help>
+        </property>
+        <property name="TemplateContainer">
+          <caption>Mallar för arbetsrum</caption>
+          <help>En referens till den behållare som innehåller tillgängliga mallar för arbetsrum.</help>
+        </property>
+        <property name="Text1">
+          <caption>Text 1</caption>
+          <help>Text som visas i flash</help>
+        </property>
+        <property name="Text2">
+          <caption>Text 2</caption>
+          <help>Text som visas i flash</help>
+        </property>
+        <property name="Text3">
+          <caption>Text 3</caption>
+          <help>Text som visas i flash</help>
+        </property>
+        <property name="Text4">
+          <caption>Text 4</caption>
+          <help>Text som visas i flash</help>
+        </property>
+        <property name="Text5">
+          <caption>Text 5</caption>
+          <help>Text som visas i flash</help>
+        </property>
+        <property name="ThirdBody">
+          <caption>Tredje innehåll</caption>
+          <help>Innehållet i det här fältet kommer att visas i ruta 3 på sidan. Du kan använda både text och bild i layouten. Observera att bilderna inte får vara större än rutan.</help>
+        </property>
+        <property name="ThreadContainerPageTypeName">
+          <caption>Sidtyp för behållare för forumtrådar</caption>
+          <help>Sidtyp för behållare för forumtrådar</help>
+        </property>
+        <property name="ThreadPageTypeName">
+          <caption>Sidtyp för forumtråd</caption>
+          <help>Sidtyp för forumtråd</help>
+        </property>
+        <property name="Thumbnail">
+          <caption>Miniatyrbild</caption>
+          <help>Sökväg till miniatyrbild som visas om sidan är en del av en listning </help>
+        </property>
+        <property name="URL">
+          <caption>URL</caption>
+          <help>URL</help>
+        </property>
+        <property name="UsageStatistics">
+          <caption>Statistik över tagganvändande</caption>
+          <help>Bör ställas in automatiskt.</help>
+        </property>
+        <property name="ValidDays">
+          <caption>Återkommande dag</caption>
+          <help>Ange om aktiviteten ska återkomma med regelbundna intervall.</help>
+        </property>
+        <property name="VideoSourceURL">
+          <caption>Videofil</caption>
+          <help>Ange en videofil i .flv-format.</help>
+        </property>
+        <property name="WorkroomIcon">
+          <caption>Ikonbild för det här arbetsrummet</caption>
+          <help>En bild som ska användas som ikon för det här arbetsrummet.</help>
+        </property>
+        <property name="WorkroomStart">
+          <caption>Startsida för det här arbetsrummet</caption>
+          <help>Startsidan för det arbetsrum som den här sidan tillhör.</help>
+        </property>
+        <property name="Writer">
+          <caption>Bloggarnamn</caption>
+          <help>Skriv in bloggarens namn.</help>
+        </property>
+        <property name="XForm">
+          <caption>Formulär</caption>
+          <help>Ange vilket formulär som skall visas på sidan. Genom att klicka på knappen kan du skapa egna formulär</help>
+        </property>
+      </common>
+      <pagetype name="[AlloyTech] Blog comment">
+        <description>Sida som används för att lagra kommentarer till bloggobjekt.</description>
+        <name>[AlloyTech] Bloggkommentar</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Blog item">
+        <description>En bloggobjektsida som används för ett enda blogginlägg.</description>
+        <name>[AlloyTech] Bloggobjekt</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Blog list">
+        <description>Listningssida som används för datumlistningar och tagglistningar.</description>
+        <name>[AlloyTech] Blogglista</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Blog personal start">
+        <description>Startsidan för en personlig blogg.</description>
+        <name>[AlloyTech] Start för personlig blogg</name>
+        <property name="Image">
+          <caption>Bild på bloggaren</caption>
+          <help>Välj en bild för bloggaren.</help>
+        </property>
+      </pagetype>
+      <pagetype name="[AlloyTech] Blog team start">
+        <description>Startsidan för en teamblogg.</description>
+        <name>[AlloyTech] Start för teamblogg</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Calendar">
+        <description>En sida där kalenderhändelser visas.</description>
+        <name>[AlloyTech] Kalender</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Calendar event">
+        <description>Sida för en händelse i kalendern.</description>
+        <name>[AlloyTech] Kalenderhändelse</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Changed recently">
+        <description>Sida där en lista över sidor som ändrats nyligen visas.</description>
+        <name>[AlloyTech] Nyligen ändrade</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Company Facts">
+        <description>Behållare som används som företagsfakta genom dynamiskt innehåll</description>
+        <name>[AlloyTech] Företagsfakta</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Document">
+        <description>Dokument publicerat från Microsoft Office</description>
+        <name>[AlloyTech] Dokument</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Event item">
+        <description>Sida som visar en specifik händelse</description>
+        <name>[AlloyTech] Händelseobjekt</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Forum">
+        <description>En forumsida.</description>
+        <name>[AlloyTech] Forum</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Forum post">
+        <description>Ett svar till en forumtråd.</description>
+        <name>[AlloyTech] Foruminlägg</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Forum thread">
+        <description>En tråd i ett forum.</description>
+        <name>[AlloyTech] Forumtråd</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Forum thread container">
+        <description>En behållare för trådar i ett forum.</description>
+        <name>[AlloyTech] Behållare för forumtrådar</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Listing">
+        <description>Visa sidsammanställning</description>
+        <name>[AlloyTech] Listningssida</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Login">
+        <description>Sida med möjliggör inloggning på webbplatsen</description>
+        <name>[AlloyTech] Inloggning</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] My Settings">
+        <description>En inställningssida där användare bland annat kan ändra sina personliga inställningar.</description>
+        <name>[AlloyTech] Mina inställningar</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] News item">
+        <description>Sida för att skapa en enskild nyhet. Sidan visas inte i menyer</description>
+        <name>[AlloyTech] Nyhetssida</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Notification Email">
+        <description>Mall för notifierings-epost</description>
+        <name>[AlloyTech] Notifierings-epost</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Registration">
+        <description>Sida där besökaren kan registrera sig själva på webbplatsen</description>
+        <name>[AlloyTech] Registrera användare</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Reseller">
+        <description>På den här sidan visas data om återförsäljare.</description>
+        <name>[AlloyTech] Återförsäljare</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] RSS source">
+        <description>Sida som visar information från EPiServer i RSS-format</description>
+        <name>[AlloyTech] RSS-källa</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Search page">
+        <description>Sida för att söka information på webbplatsen, används både för snabbsök och avancerad sök</description>
+        <name>[AlloyTech] Söksida</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] SiteMap">
+        <description>Sida som visar innehållet på hela eller delar av webbplatsen</description>
+        <name>[AlloyTech] Webbkarta</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Standard page">
+        <description>Vanlig informationssida, är den mest använda mall på webbplatsen. Den används för vanliga sidor, nyheter och händelser.</description>
+        <name>[AlloyTech] Standardsida</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Start page">
+        <description>Startsidan är huvudingången till webbplatsen och innehåller primära och sekundära innehållsfält samt olika listningar över länkar.</description>
+        <name>[AlloyTech] Startsida</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Subscription">
+        <description>Sida för besökaren att välja prenumerationsinformation</description>
+        <name>[AlloyTech] Prenumeration</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] User profile">
+        <description>Användarprofil</description>
+        <name>[AlloyTech] Användarprofil</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Workroom Calendar">
+        <description>En kalendersida i ett arbetsrum.</description>
+        <name>[AlloyTech] Arbetsrumskalender</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Workroom Calendar event">
+        <description>Sida för en händelse i kalendern.</description>
+        <name>[AlloyTech] Händelse i arbetsrumskalender</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Workroom File Manager">
+        <description>Filhantering i ett arbetsrum.</description>
+        <name>[AlloyTech] Filhanterare för arbetsrum</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Workroom list">
+        <description>Sida där alla tillgängliga arbetsrum listas.</description>
+        <name>[AlloyTech] Lista över arbetsrum</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Workroom Membership Manager">
+        <description>Sida för att lägga till eller ändra medlemskapen i ett arbetsrum.</description>
+        <name>[AlloyTech] Medlemskapshanterare för arbetsrum</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Workroom news list">
+        <description>En nyhetssida i ett arbetsrum.</description>
+        <name>[AlloyTech] Nyhetslista för arbetsrum</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] Workroom Settings">
+        <description>Sida där inställningarna för ett arbetsrum kan ändras.</description>
+        <name>[AlloyTech] Arbetsrumsinställningar</name>
+      </pagetype>
+      <pagetype name="[AlloyTech] XForm page">
+        <description>Sida som innehåller ett formulär</description>
+        <name>[AlloyTech] Formulärsida</name>
+      </pagetype>
+    </pagetypes>
+    <register>
+      <confirmation>Tack</confirmation>
+      <error>
+        <confirmpassword>Bekräfta det lösenord du angett</confirmpassword>
+        <couldnotsave>Det gick inte att spara ändringarna</couldnotsave>
+        <email>Vänligen ange din e-postadress</email>
+        <firstname>Vänligen ange ditt förnamn</firstname>
+        <incorrectemail>E-postadressen du angivit är inte korrekt</incorrectemail>
+        <lastname>Vänligen ange ditt efternamn</lastname>
+        <password>Vänligen ange ett lösenord</password>
+        <passwordlength>Lösenordet du anget är för kort. Minsta längd: </passwordlength>
+        <passwordrepeat>Lösenorden du angett är inte lika</passwordrepeat>
+      </error>
+      <password>Skriv in lösenord</password>
+      <repeatpassword>Upprepa lösenord</repeatpassword>
+      <signupbutton>Anmäl</signupbutton>
+    </register>
+    <search>
+      <advancedsearch>Avancerad sök</advancedsearch>
+      <button>Sök</button>
+      <findsimilar>Hitta liknande</findsimilar>
+      <nosearchresult>Inga matchande resultat hittades</nosearchresult>
+      <onlywholewords>Sök hela ord</onlywholewords>
+      <percentrelevancy>% relevans</percentrelevancy>
+      <relevancy>Relevans</relevancy>
+      <searchfiles>Sök bland dokument och filer</searchfiles>
+      <searchfor>Sök efter:</searchfor>
+      <searchresult>Sökresultat:</searchresult>
+      <searchstring>Sök här</searchstring>
+    </search>
+    <subscription>
+      <daily>Dagligen</daily>
+      <email>E-postadress</email>
+      <error>
+        <email>Vänligen ange din e-postadress</email>
+        <incorrectemail>E-postadressen du angivit är inte korrekt</incorrectemail>
+      </error>
+      <fastaspossible>Så snart som möjligt</fastaspossible>
+      <interval>Intervall</interval>
+      <monthly>Månatligen</monthly>
+      <subscribe>Prenumerera</subscribe>
+      <subscription>Prenumeration</subscription>
+      <weekly>Varje vecka</weekly>
+    </subscription>
+    <templates>
+      <changedpages>
+        <header>Senast ändrade filer</header>
+        <lastmodified>Senast ändrad</lastmodified>
+        <page>Sida</page>
+        <updatedpages>Senast ändrade sidor</updatedpages>
+      </changedpages>
+      <dynamiccontent>
+        <map>
+          <addresslabel>Adress</addresslabel>
+          <altlabel>Alternativtext för bild</altlabel>
+          <displaystaticimagelabel>Visa som bild</displaystaticimagelabel>
+          <emptysearchresults>Adressen kunde inte hittas</emptysearchresults>
+          <heighterrormessage>Värdet för karthöjd måste vara mellan 100 och 2000</heighterrormessage>
+          <heightlabel>Karthöjd</heightlabel>
+          <hidesearchresults>Dölj</hidesearchresults>
+          <missingmapdata>Kartinställningarna kunde inte läsas in</missingmapdata>
+          <searchbuttonlabel>Sökning</searchbuttonlabel>
+          <searchresultslabel>Sökresultat</searchresultslabel>
+          <selectionerrormessage>Det går inte att spara en karta utan en plats. Välj en plats genom att dubbelklicka på en karta eller en sökresultatmarkör.</selectionerrormessage>
+          <selectiontextmessage>Välj en plats.</selectiontextmessage>
+          <unabletoinitializemessage>Det gick inte att initiera kartorna</unabletoinitializemessage>
+          <widtherrormessage>Värdet för kartbredd måste vara mellan 100 och 2000</widtherrormessage>
+          <widthlabel>Kartbredd</widthlabel>
+        </map>
+      </dynamiccontent>
+      <events>
+        <location>Plats</location>
+        <speaker>Talare</speaker>
+      </events>
+      <personalsettings>
+        <validation>
+          <emailexists>Den e-postadress du angett används redan</emailexists>
+        </validation>
+      </personalsettings>
+      <reseller>
+        <address>Adress</address>
+        <contacts>Kontakter</contacts>
+        <name>Namn</name>
+        <url>URL</url>
+      </reseller>
+    </templates>
+    <usersettings>
+      <changepassword>Ändra lösenord</changepassword>
+      <confirmpassword>Bekräfta lösenord</confirmpassword>
+      <email>E-postadress</email>
+      <firstname>Förnamn</firstname>
+      <lastname>Efternamn</lastname>
+      <mysettings>Mina inställningar</mysettings>
+      <newpassword>Nytt lösenord</newpassword>
+      <username>Användarnamn</username>
+    </usersettings>
+    <workroom>
+      <calendar>
+        <buttonaddevent>Lägg till händelse</buttonaddevent>
+        <buttondeletecalendar>Ta bort kalender</buttondeletecalendar>
+        <buttoneditname>Redigera namn</buttoneditname>
+        <createheading>Skapa händelse</createheading>
+        <dateformat>Exempel: 11/25/2007</dateformat>
+        <editheading>Redigera händelse</editheading>
+        <invalidstartdate>Startdatumet är inte ett giltigt datum</invalidstartdate>
+        <invalidstopdate>Slutdatumet är inte ett giltigt datum</invalidstopdate>
+        <latestarttime>Starttiden måste infalla innan sluttiden.</latestarttime>
+        <nameempty>Ange en titel</nameempty>
+        <selectedperiod>Vald period:</selectedperiod>
+        <starttimeempty>Ange ett startdatum</starttimeempty>
+        <starttimelabel>Startdatum:</starttimelabel>
+        <stoptimeempty>Ange ett slutdatum </stoptimeempty>
+        <stoptimelabel>Slutdatum:</stoptimelabel>
+      </calendar>
+      <calendarlist>
+        <calendaraddnew>Lägg till kalender</calendaraddnew>
+        <calendaritemfrom>Från:</calendaritemfrom>
+        <calendaritemto>Till:</calendaritemto>
+        <calendarsectionname>Kalendernamn</calendarsectionname>
+      </calendarlist>
+      <edit>Redigera</edit>
+      <editablecontent>
+        <labeltext>Redigera innehållet och klicka på Spara.</labeltext>
+      </editablecontent>
+      <editdescription>Redigera beskrivning</editdescription>
+      <eventlist>
+        <heading>Kommande händelser</heading>
+      </eventlist>
+      <filelist>
+        <errormessage>Det gick inte att hitta rotkatalogen för arbetsrummet, eller så har du inte tillräckliga rättigheter för katalogen.</errormessage>
+        <errormissingindex>Det har inte konfigurerats något index för arbetsrummets rotkatalog. Det krävs ett index för att nyligen ändrade filer ska kunna visas.</errormissingindex>
+        <heading>Nyligen ändrade filer</heading>
+      </filelist>
+      <membershiplevel>
+        <administer>Administratör</administer>
+        <modify>Deltagande medlem</modify>
+        <read>Skrivskyddad medlem</read>
+      </membershiplevel>
+      <membershipmanager>
+        <button>
+          <addmembers>Lägg till medlemmar</addmembers>
+          <editmembers>Redigera medlemmar</editmembers>
+          <invite>Inbjudan</invite>
+          <remove>Ta bort</remove>
+          <sendinvitation>Skicka inbjudan</sendinvitation>
+        </button>
+        <confirmremovemember>Vill du ta bort de valda medlemmarna från arbetsrummet?</confirmremovemember>
+        <email>E-postadress</email>
+        <emptysearchresult>Din sökning returnerade inte några matchande användare.</emptysearchresult>
+        <inviteheading>Bjud in användare</inviteheading>
+        <invitemembermessage>Skicka en inbjudan om medlemskap till användaren med e-post.</invitemembermessage>
+        <invitemembership>Status att tilldela</invitemembership>
+        <inviteunfiledsenderemail>Det har inte angetts någon e-postadress i din profil.</inviteunfiledsenderemail>
+        <invitewithoutstatus>Status att tilldela saknas.</invitewithoutstatus>
+        <managemembersheading>Hantera arbetsrumsmedlemmar</managemembersheading>
+        <membershiplevel>Medlemsstatus</membershiplevel>
+        <removeheading>Ta bort medlem</removeheading>
+        <searchheading>Söka efter användare</searchheading>
+        <searchresultheading>Sökresultat</searchresultheading>
+        <searchtext>Sökning</searchtext>
+        <sendinvitationerror>Fel när inbjudan skickades.</sendinvitationerror>
+        <sendinvitationok>Inbjudan är skickad.</sendinvitationok>
+        <sendnotifications>Skicka aviseringar om ändringarna i medlemsstatusen?</sendnotifications>
+        <sendnotificationsno>Nej</sendnotificationsno>
+        <sendnotificationsyes>Ja</sendnotificationsyes>
+        <status>Tilldelad status</status>
+        <unabletosendnotification>Vissa aviseringar skickas kanske inte.</unabletosendnotification>
+        <username>Användarnamn</username>
+        <viewmembersheading>Arbetsrumsmedlemmar</viewmembersheading>
+      </membershipmanager>
+      <newslist>
+        <heading>Nyheter</heading>
+        <newssectionname>Namn på nyhetsrum</newssectionname>
+      </newslist>
+      <newslistpage>
+        <addnewsitem>Lägg till inlägg</addnewsitem>
+        <addnewssection>Lägg till nyhetsrum</addnewssection>
+        <bodylabel>Beskrivning:</bodylabel>
+        <createheading>Skapa inlägg</createheading>
+        <deletenewssection>Ta bort nyhetsrum</deletenewssection>
+        <editheading>Redigera inlägg</editheading>
+        <editnewssection>Redigera nyhetsrum</editnewssection>
+        <headinglabel>Titel:</headinglabel>
+        <titleempty>Ange en titel</titleempty>
+      </newslistpage>
+      <settings>
+        <availablefunctions>Tillgängliga funktioner</availablefunctions>
+      </settings>
+      <userprofile>
+        <confirmpassword>Bekräfta lösenord</confirmpassword>
+        <email>E-postadress</email>
+        <error>
+          <firstnamerequired>Ange ett förnamn</firstnamerequired>
+          <lastnamerequired>Ange ett efternamn</lastnamerequired>
+          <logout>Du är inloggad som en annan användare. Logga ut och försök igen.</logout>
+          <membership>De aktuella säkerhetsinställningarna tillåter inte att nya användare registreras. Kontakta administratören för mer information.</membership>
+          <passworddiffers>Lösenorden måste vara likadana</passworddiffers>
+          <passwordrequired>Ange ett lösenord</passwordrequired>
+          <passwordweak>Lösenordet uppfyller inte kraven i policyn för lösenord</passwordweak>
+          <unavailable>Du har inte rättigheter att komma åt den här sidan.</unavailable>
+          <usernameexists>Användarnamnet är upptaget</usernameexists>
+          <usernamerequired>Ange ett användarnamn</usernamerequired>
+        </error>
+        <firstname>Förnamn</firstname>
+        <lastname>Efternamn</lastname>
+        <password>Lösenord</password>
+        <role>Roll</role>
+        <username>Användarnamn</username>
+      </userprofile>
+      <workroomlist>
+        <addworkroom>Lägg till arbetsrum</addworkroom>
+        <createheading>Skapa arbetsrum</createheading>
+        <descriptionlabel>Beskrivning:</descriptionlabel>
+        <duplicatename>Det finns redan ett arbetsrum med samma namn.</duplicatename>
+        <nameempty>Ange ett namn</nameempty>
+        <namelabel>Namn:</namelabel>
+        <templateempty>Ange en mall</templateempty>
+        <templatelabel>Välj mall:</templatelabel>
+        <viewheading>Mina arbetsrum</viewheading>
+      </workroomlist>
+    </workroom>
+  </language>
+
+</languages>

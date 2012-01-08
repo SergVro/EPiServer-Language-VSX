@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{43707EF9-303B-46F9-BC9D-64F60EB73D2C}"
+	ProjectSection(SolutionItems) = preProject
+		EPiServerLanguageFilesExtension.vsmdi = EPiServerLanguageFilesExtension.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{DEA90955-18FD-4DC1-B45B-BC29AB7A3D64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LangFilesExtension.Core", "LangFilesExtension.Core\LangFilesExtension.Core.csproj", "{0C74A132-4EC8-4DE1-BA38-1EF64DCF8A0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LangFilesExtension.VSPackage", "LangFilesExtension.VSPackage\LangFilesExtension.VSPackage.csproj", "{F843F818-4243-457F-9D21-385771031F0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LangFilesExtension.Tests", "LangFilesExtension.Tests\LangFilesExtension.Tests.csproj", "{F3AF0992-2DAB-4D3E-8BFE-CE458BCFABC0}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs01vm:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = LangFilesExtension.Core\\LangFilesExtension.Core.csproj
+		SccProjectName1 = LangFilesExtension.Core
+		SccLocalPath1 = LangFilesExtension.Core
+		SccProjectUniqueName2 = LangFilesExtension.VSPackage\\LangFilesExtension.VSPackage.csproj
+		SccProjectName2 = LangFilesExtension.VSPackage
+		SccLocalPath2 = LangFilesExtension.VSPackage
+		SccProjectUniqueName3 = LangFilesExtension.Tests\\LangFilesExtension.Tests.csproj
+		SccProjectTopLevelParentUniqueName3 = EPiServerLanguageFilesExtension.sln
+		SccProjectName3 = LangFilesExtension.Tests
+		SccLocalPath3 = LangFilesExtension.Tests
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = EPiServerLanguageFilesExtension.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C74A132-4EC8-4DE1-BA38-1EF64DCF8A0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C74A132-4EC8-4DE1-BA38-1EF64DCF8A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C74A132-4EC8-4DE1-BA38-1EF64DCF8A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C74A132-4EC8-4DE1-BA38-1EF64DCF8A0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F843F818-4243-457F-9D21-385771031F0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F843F818-4243-457F-9D21-385771031F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F843F818-4243-457F-9D21-385771031F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F843F818-4243-457F-9D21-385771031F0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3AF0992-2DAB-4D3E-8BFE-CE458BCFABC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3AF0992-2DAB-4D3E-8BFE-CE458BCFABC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3AF0992-2DAB-4D3E-8BFE-CE458BCFABC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3AF0992-2DAB-4D3E-8BFE-CE458BCFABC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F3AF0992-2DAB-4D3E-8BFE-CE458BCFABC0} = {DEA90955-18FD-4DC1-B45B-BC29AB7A3D64}
+	EndGlobalSection
+EndGlobal
