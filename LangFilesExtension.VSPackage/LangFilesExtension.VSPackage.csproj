@@ -137,6 +137,7 @@
     <EmbeddedResource Include="VSPackage.resx">
       <MergeWithCTO>true</MergeWithCTO>
       <ManifestResourceName>VSPackage</ManifestResourceName>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -154,20 +155,23 @@
     </VSCTCompile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Icon.png">
+    <ProjectReference Include="..\LangFilesExtension.Core\LangFilesExtension.Core.csproj">
+      <Project>{0C74A132-4EC8-4DE1-BA38-1EF64DCF8A0E}</Project>
+      <Name>LangFilesExtension.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Resources\Screen.png">
+    <Content Include="Screen.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LangFilesExtension.Core\LangFilesExtension.Core.csproj">
-      <Project>{0C74A132-4EC8-4DE1-BA38-1EF64DCF8A0E}</Project>
-      <Name>LangFilesExtension.Core</Name>
-    </ProjectReference>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <PropertyGroup>
     <UseCodebase>true</UseCodebase>
