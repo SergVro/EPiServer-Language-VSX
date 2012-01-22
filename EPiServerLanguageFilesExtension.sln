@@ -17,22 +17,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LangFilesExtension.Tests", "LangFilesExtension.Tests\LangFilesExtension.Tests.csproj", "{F3AF0992-2DAB-4D3E-8BFE-CE458BCFABC0}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://tfs01vm:8080/tfs/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = LangFilesExtension.Core\\LangFilesExtension.Core.csproj
-		SccProjectName1 = LangFilesExtension.Core
-		SccLocalPath1 = LangFilesExtension.Core
-		SccProjectUniqueName2 = LangFilesExtension.VSPackage\\LangFilesExtension.VSPackage.csproj
-		SccProjectName2 = LangFilesExtension.VSPackage
-		SccLocalPath2 = LangFilesExtension.VSPackage
-		SccProjectUniqueName3 = LangFilesExtension.Tests\\LangFilesExtension.Tests.csproj
-		SccProjectTopLevelParentUniqueName3 = EPiServerLanguageFilesExtension.sln
-		SccProjectName3 = LangFilesExtension.Tests
-		SccLocalPath3 = LangFilesExtension.Tests
-	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = EPiServerLanguageFilesExtension.vsmdi
 	EndGlobalSection

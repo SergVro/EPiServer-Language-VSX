@@ -59,6 +59,12 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.KeyTagger
                 {
                     _translationKeys = ParseCurrentFile();
                 }
+
+                if (_translationKeys.Count() == 0)
+                {
+                    yield break;
+                }
+
                 SnapshotSpan currentSpan = _currentLine.Extent;
                 string text = currentSpan.GetText();
 
@@ -105,7 +111,7 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.KeyTagger
         private void OnSelectionChanged(object sender, EventArgs e)
         {
             var selection = (ITextSelection) sender;
-            ITextSnapshotLine lineFromPosition =
+            var lineFromPosition =
                 selection.ActivePoint.Position.Snapshot.GetLineFromPosition(selection.ActivePoint.Position);
             TriggerTagsChangedForNewPosition(lineFromPosition);
         }
@@ -146,11 +152,6 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.KeyTagger
             OnTagsChanged(new SnapshotSpanEventArgs(span));
         }
 
-        private void OnTextChanged(object sender, TextContentChangedEventArgs e)
-        {
-            _translationKeys = null;
-        }
-
         private LanguageInfo ParseCurrentFile()
         {
             string text = _textView.TextSnapshot.GetText();
@@ -158,6 +159,11 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.KeyTagger
             var languageInfo = new LanguageInfo();
             languageInfo.AddKeys(LanguageFilesParser.Instance.ReadTranslationKeys(text, _filePath));
             return languageInfo;
+        }
+
+        private void OnTextChanged(object sender, TextContentChangedEventArgs e)
+        {
+            _translationKeys = null;
         }
 
         private void OnTagsChanged(SnapshotSpanEventArgs e)

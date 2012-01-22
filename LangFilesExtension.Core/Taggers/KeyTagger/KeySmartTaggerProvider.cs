@@ -20,9 +20,6 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.KeyTagger
     public class KeySmartTaggerProvider : IViewTaggerProvider
     {
         [Import]
-        internal IClassifierAggregatorService ClassifierAggregatorService { get; set; }
-
-        [Import]
         internal ITranslationKeysProvider KeysProvider { get; set; }
 
         [Import(typeof (SVsServiceProvider))]
@@ -37,12 +34,10 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.KeyTagger
                 throw new ArgumentNullException("buffer");
             }
 
-            // If this view isn't editable, then there isn't a good reason to be showing these.
             if (!textView.Roles.Contains(PredefinedTextViewRoles.Editable) ||
                 !textView.Roles.Contains(PredefinedTextViewRoles.PrimaryDocument))
                 return null;
 
-            // Make sure we only tagging top buffer
             if (buffer != textView.TextBuffer)
                 return null;
 

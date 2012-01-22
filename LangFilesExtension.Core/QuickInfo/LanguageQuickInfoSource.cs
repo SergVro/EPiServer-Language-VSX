@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Linq;
+using EPiServer.Labs.LangFilesExtension.Core.Taggers;
 using EPiServer.Labs.LangFilesExtension.Core.Taggers.MarkerTagger;
 using Microsoft.VisualStudio.Language.Intellisense;
 using Microsoft.VisualStudio.Text;
@@ -14,17 +15,17 @@ namespace EPiServer.Labs.LangFilesExtension.Core.QuickInfo
     {
         private readonly LanguageQuickInfoProvider _provider;
         private readonly ITextBuffer _buffer;
-        private readonly ITagAggregator<TranslationTag> _aggregator;
+        private readonly ICodeParser _parser;
 
         [Import]
         internal IClassificationTypeRegistryService ClassificationTypeRegistryService { get; set; }
 
 
-        public LanguageQuickInfoSource(LanguageQuickInfoProvider provider, ITextBuffer buffer, ITagAggregator<TranslationTag> aggregator)
+        public LanguageQuickInfoSource(LanguageQuickInfoProvider provider, ITextBuffer buffer, ICodeParser parser)
         {
             _provider = provider;
             _buffer = buffer;
-            _aggregator = aggregator;
+            _parser = parser;
         }
 
         private bool _isDisposed;
@@ -63,14 +64,14 @@ namespace EPiServer.Labs.LangFilesExtension.Core.QuickInfo
             {
                 return;
             }
-
-            foreach (IMappingTagSpan<TranslationTag> curTag in _aggregator.GetTags(new SnapshotSpan(triggerPoint.Value, triggerPoint.Value)))
+            
+            foreach (var token in _parser.GetTokens(new SnapshotSpan(triggerPoint.Value, triggerPoint.Value)))
             {
-                var tagSpan = curTag.Span.GetSpans(_buffer).First();
+                var tagSpan = token.Span;
                 applicableToSpan = _buffer.CurrentSnapshot.CreateTrackingSpan(tagSpan, SpanTrackingMode.EdgeExclusive);
-                if (!quickInfoContent.Contains(curTag.Tag.TarnslationsString))
+                if (!quickInfoContent.Contains(token.TarnslationsString))
                 {
-                    quickInfoContent.Insert(0, curTag.Tag.TarnslationsString);
+                    quickInfoContent.Insert(0, token.TarnslationsString);
                 }
             }
         }

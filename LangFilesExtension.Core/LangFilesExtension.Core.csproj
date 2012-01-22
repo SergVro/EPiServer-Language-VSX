@@ -14,10 +14,14 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -89,10 +93,15 @@
     <Compile Include="QuickInfo\LanguageQuickInfoProvider.cs" />
     <Compile Include="QuickInfo\LanguageQuickInfoSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Taggers\CodeParser.cs" />
+    <Compile Include="Taggers\CodeParserFactory.cs" />
+    <Compile Include="Taggers\ICodeParser.cs" />
+    <Compile Include="Taggers\ICodeParserFactory.cs" />
     <Compile Include="Taggers\KeyTagger\CopyTranslationKeyAction.cs" />
     <Compile Include="Taggers\KeyTagger\KeySmartTag.cs" />
     <Compile Include="Taggers\KeyTagger\KeySmartTagger.cs" />
     <Compile Include="Taggers\KeyTagger\KeySmartTaggerProvider.cs" />
+    <Compile Include="Taggers\LanguageToken.cs" />
     <Compile Include="Taggers\SmartTagger\OpenTranslationAction.cs" />
     <Compile Include="Taggers\SmartTagger\TranslationSmartTag.cs" />
     <Compile Include="Taggers\SmartTagger\TranslationSmartTagger.cs" />

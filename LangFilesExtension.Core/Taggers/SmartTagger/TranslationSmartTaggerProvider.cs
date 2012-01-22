@@ -13,20 +13,17 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.SmartTagger
 {
     [Export(typeof(IViewTaggerProvider))]
     [ContentType("any")]
-    [TagType(typeof(SmartTag))]
+    [TagType(typeof(TranslationSmartTag))]
     public class TranslationSmartTaggerProvider : IViewTaggerProvider
     {
-        [Import]
-        internal IClassifierAggregatorService ClassifierAggregatorService { get; set; }
-
-        [Import]
-        internal IBufferTagAggregatorFactoryService AggService { get; set; }
-
         [Import]
         internal ITranslationKeysProvider KeysProvider { get; set; }
 
         [Import(typeof(SVsServiceProvider))]
         internal IServiceProvider ServiceProvider { get; set; }
+
+        [Import]
+        internal ICodeParserFactory ParserFactory { get; set; }
 
         #region Implementation of IViewTaggerProvider
 
@@ -37,16 +34,15 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.SmartTagger
                 throw new ArgumentNullException("buffer");
             }
 
-            // If this view isn't editable, then there isn't a good reason to be showing these.
-            if (!textView.Roles.Contains(PredefinedTextViewRoles.Editable) || !textView.Roles.Contains(PredefinedTextViewRoles.PrimaryDocument))
+            if (!textView.Roles.Contains(PredefinedTextViewRoles.Editable) ||
+                !textView.Roles.Contains(PredefinedTextViewRoles.PrimaryDocument))
                 return null;
 
-            // Make sure we only tagging top buffer
             if (buffer != textView.TextBuffer)
                 return null;
 
-            var tagAggregator = AggService.CreateTagAggregator<TranslationTag>(buffer);
-            return new TranslationSmartTagger(buffer, textView, KeysProvider, ServiceProvider, tagAggregator) as ITagger<T>;
+            var parser = ParserFactory.GetCodeParser(buffer, KeysProvider);
+            return new TranslationSmartTagger(parser, ServiceProvider) as ITagger<T>;
         }
 
         #endregion

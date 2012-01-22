@@ -25,18 +25,22 @@ namespace EPiServer.Labs.LangFilesExtension.Core.QuickInfo
         internal ITranslationKeysProvider KeysProvider { get; set; }
 
         [Import]
+        internal ICodeParserFactory ParserFactory { get; set; }
+
+        [Import]
         internal IBufferTagAggregatorFactoryService AggService { get; set; }
 
         /// <summary>
         /// Creates a Quick Info provider for the specified context.
         /// </summary>
-        /// <param name="textBuffer">The text buffer for which to create a provider.</param>
+        /// <param name="buffer">The text buffer for which to create a provider.</param>
         /// <returns>
         /// A valid <see cref="T:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSource"/> instance, or null if none could be created.
         /// </returns>
-        public IQuickInfoSource TryCreateQuickInfoSource(ITextBuffer textBuffer)
+        public IQuickInfoSource TryCreateQuickInfoSource(ITextBuffer buffer)
         {
-            return new LanguageQuickInfoSource(this, textBuffer, AggService.CreateTagAggregator<TranslationTag>(textBuffer));
+            var parser = ParserFactory.GetCodeParser(buffer, KeysProvider);
+            return new LanguageQuickInfoSource(this, buffer, parser);
         }
     }
 }
