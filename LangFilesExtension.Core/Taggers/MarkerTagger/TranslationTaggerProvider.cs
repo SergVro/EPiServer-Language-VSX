@@ -19,9 +19,6 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.MarkerTagger
         [Import]
         internal ITranslationKeysProvider KeysProvider { get; set; }
 
-        [Import]
-        internal ICodeParserFactory ParserFactory { get; set; }
-
         public ITagger<T> CreateTagger<T>(ITextView textView, ITextBuffer buffer) where T : ITag
         {
             if (buffer == null)
@@ -38,8 +35,8 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.MarkerTagger
             if (buffer != textView.TextBuffer)
                 return null;
 
-            var parser = ParserFactory.GetCodeParser(buffer, KeysProvider);
-            return new TranslationTagger(parser) as ITagger<T>;
+            var parser = CodeParserFactory.Instance.GetCodeParser(buffer, KeysProvider);
+            return new TranslationTagger(parser, buffer) as ITagger<T>;
         }
     }
 }

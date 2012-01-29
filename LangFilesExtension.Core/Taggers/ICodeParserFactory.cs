@@ -5,8 +5,9 @@ using Microsoft.VisualStudio.Text;
 
 namespace EPiServer.Labs.LangFilesExtension.Core.Taggers
 {
-    internal interface ICodeParserFactory
+    public interface ICodeParserFactory
     {
         ICodeParser GetCodeParser(ITextBuffer buffer, ITranslationKeysProvider keysProvider);
+        void Reset();
     }
 }

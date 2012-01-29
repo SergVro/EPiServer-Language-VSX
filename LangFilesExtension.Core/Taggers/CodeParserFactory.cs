@@ -1,14 +1,36 @@
 using System.Collections.Generic;
-using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Text;
 
 namespace EPiServer.Labs.LangFilesExtension.Core.Taggers
 {
-    [Export(typeof(ICodeParserFactory))]
-    internal class CodeParserFactory : ICodeParserFactory
+    public class CodeParserFactory : ICodeParserFactory
     {
-        private static readonly IDictionary<ITextBuffer, ICodeParser> _parsers =  new Dictionary<ITextBuffer, ICodeParser>();
+        private readonly IDictionary<ITextBuffer, ICodeParser> _parsers;
         private static readonly object _lockObject = new object();
+        private static volatile ICodeParserFactory _instance;
+
+        public static ICodeParserFactory Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    lock (_lockObject)
+                    {
+                        if (_instance == null)
+                        {
+                            _instance = new CodeParserFactory();
+                        }
+                    }
+                }
+                return _instance;
+            }
+        }
+
+        private CodeParserFactory()
+        {
+            _parsers = new Dictionary<ITextBuffer, ICodeParser>();
+        }
 
         public ICodeParser GetCodeParser(ITextBuffer buffer, ITranslationKeysProvider keysProvider)
         {
@@ -23,6 +45,14 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers
                 parsers = _parsers;
             }
             return parsers[buffer];
+        }
+
+        public void Reset()
+        {
+            lock (_lockObject)
+            {
+                _parsers.Clear(); 
+            }
         }
     }
 }

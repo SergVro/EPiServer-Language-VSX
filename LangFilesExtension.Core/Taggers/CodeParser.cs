@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.Text;
 
 namespace EPiServer.Labs.LangFilesExtension.Core.Taggers
 {
-    internal class CodeParser : ICodeParser
+    internal class CodeParser : ICodeParser, IDisposable
     {
         private readonly ITextBuffer _buffer;
         private readonly ITranslationKeysProvider _keysProvider;
@@ -32,7 +32,7 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers
 
         #region ICodeParser Members
 
-        public event EventHandler TokensChanged;
+        public event EventHandler<SnapshotSpanEventArgs> TokensChanged;
 
         public ITextSnapshot Snapshot
         {
@@ -41,7 +41,7 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers
 
         public IEnumerable<LanguageToken> GetTokens(SnapshotSpan span)
         {
-            return GetTokensFromSnapshot(span.Snapshot).Where(t => t.Span.IntersectsWith(span));
+            return GetTokens().Where(t => t.Span.GetSpan(span.Snapshot).IntersectsWith(span));
         }
 
         public IEnumerable<LanguageToken> GetTokens(NormalizedSnapshotSpanCollection spans)
@@ -51,37 +51,68 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers
 
         #endregion
 
+        private IEnumerable<LanguageToken> GetTokens()
+        {
+            return _tokens ?? (_tokens = GetTokensInternal(_buffer.CurrentSnapshot));
+        }
+
         private void KeysUpdated(object sender, EventArgs e)
         {
             _translationKeys = _keysProvider.GetKeys();
             UpdateTokens();
+
+            var span = new SnapshotSpan(Snapshot, new Span(0, Snapshot.Length));
+            OnTokensChanged(span);
+        }
+
+        private void BufferChanged(object sender, TextContentChangedEventArgs e)
+        {
+            if (!e.Changes.Any())
+            {
+                return;
+            }
+            ITextSnapshot textSnapshot = e.After;
+
+            if (e.Changes.Any(c => _tokens.Any(t => t.Span.GetSpan(e.After).IntersectsWith(c.OldSpan) 
+                                    || t.Span.GetSpan(e.After).IntersectsWith(c.NewSpan))))
+            {
+                UpdateTokens();
+            }
+            else
+            {
+                var tokensCount = _tokens.Count;
+                foreach (var change in e.Changes)
+                {
+                    
+                    var lineStart = textSnapshot.GetLineFromPosition(change.NewSpan.Start);
+                    var lineEnd = textSnapshot.GetLineFromPosition(change.NewSpan.End);
+                    var changedSpan = new SnapshotSpan(lineStart.Start, lineEnd.End);
+                    AddTokensFromText(textSnapshot, _tokens, lineStart.Start.Position, changedSpan.GetText());
+                }
+                if (tokensCount != _tokens.Count)
+                {
+                    _tokens = GetTokens().ToList();
+                    RemoveDupplicates(_tokens, textSnapshot);
+                }
+            }
+            var changeslineStart = textSnapshot.GetLineFromPosition(e.Changes.First().NewSpan.Start);
+            var changeslineEnd = textSnapshot.GetLineFromPosition(e.Changes.Last().NewSpan.End);
+            var changesSpan = new SnapshotSpan(changeslineStart.Start, changeslineEnd.End);
+            OnTokensChanged(changesSpan);
+
+        }
+
+        private void RemoveDupplicates(IList<LanguageToken> tokens, ITextSnapshot textSnapshot)
+        {
+            var tokensList = tokens.Select(t => new {Token = t, Index = tokens.IndexOf(t), SnapShotSpan = t.Span.GetSpan(textSnapshot)}).ToList();
+            var noDuplicate = tokensList.Where(t =>
+                !tokensList.Any(ti => ti.SnapShotSpan.IntersectsWith(t.SnapShotSpan) && ti.Index > t.Index) );
+            _tokens = noDuplicate.Select(t => t.Token).ToList();
         }
 
         private void UpdateTokens()
         {
             _tokens = GetTokensInternal(_buffer.CurrentSnapshot);
-            OnTokensChanged();
-        }
-
-        private void BufferChanged(object sender, TextContentChangedEventArgs e)
-        {
-            UpdateTokens();
-        }
-
-        private IEnumerable<LanguageToken> GetTokensFromSnapshot(ITextSnapshot snapshot)
-        {
-            if (_tokens == null)
-            {
-                _tokens = GetTokensInternal(_buffer.CurrentSnapshot);
-            }
-            if (_tokens.Any(t => t.Span.Snapshot != snapshot))
-            {
-                foreach (LanguageToken token in _tokens)
-                {
-                    token.Span = token.Span.TranslateTo(snapshot, SpanTrackingMode.EdgeExclusive);
-                }
-            }
-            return _tokens;
         }
 
         private IList<LanguageToken> GetTokensInternal(ITextSnapshot snapshot)
@@ -94,6 +125,13 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers
             string spanText = snapshot.GetText();
             const int startIndex = 0;
 
+            AddTokensFromText(snapshot, tokens, startIndex, spanText);
+
+            return tokens;
+        }
+
+        private void AddTokensFromText(ITextSnapshot snapshot, IList<LanguageToken> tokens, int startIndex, string spanText)
+        {
             Match match = _resourcesRegex.Match(spanText);
             while (match.Success)
             {
@@ -104,22 +142,35 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers
                 {
                     var languageToken = new LanguageToken();
                     languageToken.TranslationKeys = translations;
-                    languageToken.Span = new SnapshotSpan(snapshot, startIndex + keyGroup.Index, keyGroup.Length);
+                    languageToken.Span = snapshot.CreateTrackingSpan(startIndex + keyGroup.Index, keyGroup.Length,
+                                                                     SpanTrackingMode.EdgeExclusive);
                     languageToken.TarnslationsString = translations
-                        .Aggregate("\n", (curr, tr) => string.Format("{0}{1}: {2}\n", curr,  tr.Language, tr.Value));
+                        .Aggregate("\n", (curr, tr) => string.Format("{0}{1}: {2}\n", curr, tr.Language, tr.Value));
                     tokens.Add(languageToken);
                 }
                 match = match.NextMatch();
             }
-            return tokens;
         }
 
-        private void OnTokensChanged()
+        private void OnTokensChanged(SnapshotSpan span)
         {
-            EventHandler handler = TokensChanged;
+            var eventArgs = new SnapshotSpanEventArgs(span);
+            var handler = TokensChanged;
             if (handler != null)
             {
-                handler(this, new EventArgs());
+                handler(this, eventArgs);
+            }
+        }
+
+        public void Dispose()
+        {
+            if (_buffer != null)
+            {
+                _buffer.ChangedLowPriority -= BufferChanged;
+            }
+            if (_keysProvider != null)
+            {
+                _keysProvider.KeysUpdated -= KeysUpdated;
             }
         }
     }

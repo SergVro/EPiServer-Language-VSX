@@ -25,9 +25,6 @@ namespace EPiServer.Labs.LangFilesExtension.Core.QuickInfo
         internal ITranslationKeysProvider KeysProvider { get; set; }
 
         [Import]
-        internal ICodeParserFactory ParserFactory { get; set; }
-
-        [Import]
         internal IBufferTagAggregatorFactoryService AggService { get; set; }
 
         /// <summary>
@@ -39,7 +36,7 @@ namespace EPiServer.Labs.LangFilesExtension.Core.QuickInfo
         /// </returns>
         public IQuickInfoSource TryCreateQuickInfoSource(ITextBuffer buffer)
         {
-            var parser = ParserFactory.GetCodeParser(buffer, KeysProvider);
+            var parser = CodeParserFactory.Instance.GetCodeParser(buffer, KeysProvider);
             return new LanguageQuickInfoSource(this, buffer, parser);
         }
     }

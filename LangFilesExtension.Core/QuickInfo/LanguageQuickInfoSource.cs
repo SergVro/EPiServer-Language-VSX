@@ -67,8 +67,7 @@ namespace EPiServer.Labs.LangFilesExtension.Core.QuickInfo
             
             foreach (var token in _parser.GetTokens(new SnapshotSpan(triggerPoint.Value, triggerPoint.Value)))
             {
-                var tagSpan = token.Span;
-                applicableToSpan = _buffer.CurrentSnapshot.CreateTrackingSpan(tagSpan, SpanTrackingMode.EdgeExclusive);
+                applicableToSpan = token.Span;
                 if (!quickInfoContent.Contains(token.TarnslationsString))
                 {
                     quickInfoContent.Insert(0, token.TarnslationsString);

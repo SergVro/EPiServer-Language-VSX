@@ -9,15 +9,17 @@ using Microsoft.VisualStudio.Text.Tagging;
 
 namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.SmartTagger
 {
-    public class TranslationSmartTagger : ITagger<TranslationSmartTag>
+    public class TranslationSmartTagger : ITagger<TranslationSmartTag>, IDisposable
     {
         private readonly ICodeParser _parser;
         private readonly IServiceProvider _serviceProvider;
+        private readonly ITextBuffer _buffer;
 
-        public TranslationSmartTagger(ICodeParser parser, IServiceProvider serviceProvider)
+        public TranslationSmartTagger(ICodeParser parser, ITextBuffer buffer, IServiceProvider serviceProvider)
         {
             _parser = parser;
             _serviceProvider = serviceProvider;
+            _buffer = buffer;
 
             _parser.TokensChanged += TokensChangedEventHandler;
         }
@@ -27,7 +29,7 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.SmartTagger
         public IEnumerable<ITagSpan<TranslationSmartTag>> GetTags(NormalizedSnapshotSpanCollection spans)
         {
             IEnumerable<LanguageToken> tokens = _parser.GetTokens(spans);
-            return tokens.Select(t => CreateTag(t.TranslationKeys, t.Span));
+            return tokens.Select(t => CreateTag(t.TranslationKeys, t.Span.GetSpan(_buffer.CurrentSnapshot)));
         }
 
         public event EventHandler<SnapshotSpanEventArgs> TagsChanged;
@@ -51,17 +53,23 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.SmartTagger
             return new TagSpan<TranslationSmartTag>(snapshotSpan, new TranslationSmartTag(actionSets));
         }
 
-        private void TokensChangedEventHandler(object sender, EventArgs e)
+        private void TokensChangedEventHandler(object sender, SnapshotSpanEventArgs e)
         {
-            ITextSnapshot snapshot = _parser.Snapshot;
-            var span = new SnapshotSpan(snapshot, new Span(0, snapshot.Length));
-            OnTagsChanged(new SnapshotSpanEventArgs(span));
+            OnTagsChanged(e);
         }
 
         private void OnTagsChanged(SnapshotSpanEventArgs e)
         {
             EventHandler<SnapshotSpanEventArgs> handler = TagsChanged;
             if (handler != null) handler(this, e);
+        }
+
+        public void Dispose()
+        {
+            if (_parser != null)
+            {
+                _parser.TokensChanged -= TokensChangedEventHandler;
+            }
         }
     }
 }

@@ -15,13 +15,27 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Parser
         private const string KeysSeparator = "/";
         public const string LanguageFilesExtension = ".xml";
         private readonly LanguageInfo _translations;
-
-        private static LanguageFilesParser _instance;
         private EventHandler _dataUpdated;
+
+        private static volatile LanguageFilesParser _instance;
+        private static readonly object _lockObject = new object();
 
         public static LanguageFilesParser Instance
         {
-            get { return _instance ?? (_instance = new LanguageFilesParser()); }
+            get
+            {
+                if (_instance == null)
+                {
+                    lock (_lockObject)
+                    {
+                        if (_instance == null)
+                        {
+                            _instance = new LanguageFilesParser();
+                        }
+                    }
+                }
+                return _instance;
+            }
         }
 
         public LanguageInfo Translations

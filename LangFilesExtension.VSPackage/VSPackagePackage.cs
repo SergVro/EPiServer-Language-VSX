@@ -1,10 +1,12 @@
 ﻿using System;
+using System.ComponentModel.Composition;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.ComponentModel.Design;
 using EPiServer.Labs.LangFilesExtension.Core.Parser;
+using EPiServer.Labs.LangFilesExtension.Core.Taggers;
 using EnvDTE;
 using EnvDTE80;
 using Microsoft.VisualStudio;
@@ -87,12 +89,11 @@ namespace EPiServer.Labs.LangFilesExtension.VSPackage
             _solutionEvents = _dte.Events.SolutionEvents;
             _solutionEvents.Opened += SolutionOpened;
 
-
-
         }
 
         private void SolutionOpened()
         {
+            CodeParserFactory.Instance.Reset();
             UpdateTranslationData();
         }
 
@@ -130,6 +131,7 @@ namespace EPiServer.Labs.LangFilesExtension.VSPackage
         {
             var applicationObject = (DTE2)GetGlobalService(typeof(SDTE));
             LanguageFilesParser.Instance.UpdateData(applicationObject);
+            
         }
 
         #region Implementation of IVsRunningDocTableEvents3

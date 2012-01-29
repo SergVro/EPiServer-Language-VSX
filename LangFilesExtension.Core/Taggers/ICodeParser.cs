@@ -8,7 +8,7 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers
 {
     public interface ICodeParser
     {
-        event EventHandler TokensChanged;
+        event EventHandler<SnapshotSpanEventArgs> TokensChanged;
         ITextSnapshot Snapshot { get; }
         IEnumerable<LanguageToken> GetTokens(SnapshotSpan span);
         IEnumerable<LanguageToken> GetTokens(NormalizedSnapshotSpanCollection spans);

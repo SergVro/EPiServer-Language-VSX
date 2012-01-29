@@ -21,18 +21,15 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.KeyTagger
                                                      RegexOptions.Multiline);
 
         private readonly ITranslationKeysProvider _keysProvider;
-        private readonly IServiceProvider _serviceProvider;
         private readonly ITextView _textView;
         private ITextSnapshotLine _currentLine;
         private LanguageInfo _translationKeys;
 
-        public KeySmartTagger(ITextBuffer buffer, ITextView textView, ITranslationKeysProvider keysProvider,
-                              IServiceProvider serviceProvider)
+        public KeySmartTagger(ITextBuffer buffer, ITextView textView, ITranslationKeysProvider keysProvider)
         {
             _buffer = buffer;
             _textView = textView;
             _keysProvider = keysProvider;
-            _serviceProvider = serviceProvider;
             _keysProvider.KeysUpdated += KeysUpdated;
             _textView.Selection.SelectionChanged += OnSelectionChanged;
             _buffer.Changed += OnTextChanged;
@@ -84,8 +81,7 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.KeyTagger
 
                         foreach (TranslationKeyInfo translationKey in translationKeys)
                         {
-                            ISmartTagAction action = new CopyTranslationKeyAction(translationKey.Key, _serviceProvider);
-                            actionList.Add(action);
+                            AddActionsForKey(actionList, translationKey);
                         }
 
                         if (actionList.Any())
@@ -102,6 +98,35 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.KeyTagger
                     match = match.NextMatch();
                 }
             }
+        }
+
+        private void AddActionsForKey(List<ISmartTagAction> actionList, TranslationKeyInfo translationKey)
+        {
+            var actionTemplates = new List<string>
+                                      {
+                                          "{0}",
+                                          "Translate(\"{0}\")",
+                                          "LanguageManager.Instance.Translate(\"{0}\")"
+                                      };
+
+            foreach (var actionTemplate in actionTemplates)
+            {
+                ISmartTagAction action = new CopyTranslationKeyAction(String.Format(actionTemplate, translationKey.Key));
+                actionList.Add(action);
+            }
+
+            var actionTemplatesWithTransform = new List<string>
+                                      {
+                                          "{0}",
+                                          "<%$ Resources: EPiServer, {0} %>"
+                                      };
+            foreach (var actionTemplate in actionTemplatesWithTransform)
+            {
+                ISmartTagAction action = new CopyTranslationKeyAction(String.Format(actionTemplate, translationKey.Key.Replace("/",".").Trim('.')));
+                actionList.Add(action);
+            }
+     
+
         }
 
         public event EventHandler<SnapshotSpanEventArgs> TagsChanged;

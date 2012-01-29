@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using System.Linq;
-using System.Text;
-using EPiServer.Labs.LangFilesExtension.Core.Taggers.SmartTagger;
-using Microsoft.VisualStudio.Language.Intellisense;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Text;
-using Microsoft.VisualStudio.Text.Classification;
 using Microsoft.VisualStudio.Text.Editor;
 using Microsoft.VisualStudio.Text.Tagging;
 using Microsoft.VisualStudio.Utilities;
@@ -41,7 +35,7 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.KeyTagger
             if (buffer != textView.TextBuffer)
                 return null;
 
-            return new KeySmartTagger(buffer, textView, KeysProvider, ServiceProvider) as ITagger<T>;
+            return new KeySmartTagger(buffer, textView, KeysProvider) as ITagger<T>;
         }
 
         #endregion
