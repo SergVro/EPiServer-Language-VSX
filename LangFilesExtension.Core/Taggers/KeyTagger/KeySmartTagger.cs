@@ -1,4 +1,23 @@
-﻿using System;
+﻿#region copyright
+
+// COPYRIGHT (C) 2012 EPISERVER AB
+// 
+// THIS FILE IS PART OF Language files Visual Studio Extension for EPiServer.
+// 
+// Language files Visual Studio Extension for EPiServer IS FREE SOFTWARE: YOU CAN REDISTRIBUTE IT AND/OR MODIFY IT
+// UNDER THE TERMS OF THE GNU LESSER GENERAL PUBLIC LICENSE VERSION v2.1 AS PUBLISHED BY THE FREE SOFTWARE
+// FOUNDATION.
+// 
+// Language files Visual Studio Extension for EPiServer IS DISTRIBUTED IN THE HOPE THAT IT WILL BE USEFUL, BUT WITHOUT
+// ANY WARRANTY; WITHOUT EVEN THE IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+// PURPOSE. SEE THE GNU LESSER GENERAL PUBLIC LICENSE FOR MORE DETAILS.
+// 
+// YOU SHOULD HAVE RECEIVED A COPY OF THE GNU LESSER GENERAL PUBLIC LICENSE ALONG WITH 
+// Language files Visual Studio Extension for EPiServer. IF NOT, SEE <HTTP://WWW.GNU.ORG/LICENSES/>.
+
+#endregion
+
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -31,7 +50,7 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.KeyTagger
             _textView = textView;
             _keysProvider = keysProvider;
             _keysProvider.KeysUpdated += KeysUpdated;
-            _textView.Selection.SelectionChanged += OnSelectionChanged;
+            _textView.Caret.PositionChanged += OnPositionChanged;
             _buffer.Changed += OnTextChanged;
             ITextDocument textDocument;
             if (buffer.Properties.TryGetProperty(typeof (ITextDocument), out textDocument))
@@ -100,6 +119,10 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.KeyTagger
             }
         }
 
+        public event EventHandler<SnapshotSpanEventArgs> TagsChanged;
+
+        #endregion
+
         private void AddActionsForKey(List<ISmartTagAction> actionList, TranslationKeyInfo translationKey)
         {
             var actionTemplates = new List<string>
@@ -116,28 +139,23 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.KeyTagger
             }
 
             var actionTemplatesWithTransform = new List<string>
-                                      {
-                                          "{0}",
-                                          "<%$ Resources: EPiServer, {0} %>"
-                                      };
+                                                   {
+                                                       "{0}",
+                                                       "<%$ Resources: EPiServer, {0} %>"
+                                                   };
             foreach (var actionTemplate in actionTemplatesWithTransform)
             {
-                ISmartTagAction action = new CopyTranslationKeyAction(String.Format(actionTemplate, translationKey.Key.Replace("/",".").Trim('.')));
+                ISmartTagAction action =
+                    new CopyTranslationKeyAction(String.Format(actionTemplate,
+                                                               translationKey.Key.Replace("/", ".").Trim('.')));
                 actionList.Add(action);
             }
-     
-
         }
 
-        public event EventHandler<SnapshotSpanEventArgs> TagsChanged;
-
-        #endregion
-
-        private void OnSelectionChanged(object sender, EventArgs e)
+        private void OnPositionChanged(object sender, CaretPositionChangedEventArgs e)
         {
-            var selection = (ITextSelection) sender;
             var lineFromPosition =
-                selection.ActivePoint.Position.Snapshot.GetLineFromPosition(selection.ActivePoint.Position);
+                e.NewPosition.BufferPosition.Snapshot.GetLineFromPosition(e.NewPosition.BufferPosition);
             TriggerTagsChangedForNewPosition(lineFromPosition);
         }
 

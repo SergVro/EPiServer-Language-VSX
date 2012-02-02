@@ -1,3 +1,22 @@
+#region copyright
+
+// COPYRIGHT (C) 2012 EPISERVER AB
+// 
+// THIS FILE IS PART OF Language files Visual Studio Extension for EPiServer.
+// 
+// Language files Visual Studio Extension for EPiServer IS FREE SOFTWARE: YOU CAN REDISTRIBUTE IT AND/OR MODIFY IT
+// UNDER THE TERMS OF THE GNU LESSER GENERAL PUBLIC LICENSE VERSION v2.1 AS PUBLISHED BY THE FREE SOFTWARE
+// FOUNDATION.
+// 
+// Language files Visual Studio Extension for EPiServer IS DISTRIBUTED IN THE HOPE THAT IT WILL BE USEFUL, BUT WITHOUT
+// ANY WARRANTY; WITHOUT EVEN THE IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+// PURPOSE. SEE THE GNU LESSER GENERAL PUBLIC LICENSE FOR MORE DETAILS.
+// 
+// YOU SHOULD HAVE RECEIVED A COPY OF THE GNU LESSER GENERAL PUBLIC LICENSE ALONG WITH 
+// Language files Visual Studio Extension for EPiServer. IF NOT, SEE <HTTP://WWW.GNU.ORG/LICENSES/>.
+
+#endregion
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,6 +70,22 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers
 
         #endregion
 
+        #region IDisposable Members
+
+        public void Dispose()
+        {
+            if (_buffer != null)
+            {
+                _buffer.ChangedLowPriority -= BufferChanged;
+            }
+            if (_keysProvider != null)
+            {
+                _keysProvider.KeysUpdated -= KeysUpdated;
+            }
+        }
+
+        #endregion
+
         private IEnumerable<LanguageToken> GetTokens()
         {
             return _tokens ?? (_tokens = GetTokensInternal(_buffer.CurrentSnapshot));
@@ -73,8 +108,8 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers
             }
             ITextSnapshot textSnapshot = e.After;
 
-            if (e.Changes.Any(c => _tokens.Any(t => t.Span.GetSpan(e.After).IntersectsWith(c.OldSpan) 
-                                    || t.Span.GetSpan(e.After).IntersectsWith(c.NewSpan))))
+            if (e.Changes.Any(c => _tokens.Any(t => t.Span.GetSpan(e.After).IntersectsWith(c.OldSpan)
+                                                    || t.Span.GetSpan(e.After).IntersectsWith(c.NewSpan))))
             {
                 UpdateTokens();
             }
@@ -83,7 +118,6 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers
                 var tokensCount = _tokens.Count;
                 foreach (var change in e.Changes)
                 {
-                    
                     var lineStart = textSnapshot.GetLineFromPosition(change.NewSpan.Start);
                     var lineEnd = textSnapshot.GetLineFromPosition(change.NewSpan.End);
                     var changedSpan = new SnapshotSpan(lineStart.Start, lineEnd.End);
@@ -99,14 +133,18 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers
             var changeslineEnd = textSnapshot.GetLineFromPosition(e.Changes.Last().NewSpan.End);
             var changesSpan = new SnapshotSpan(changeslineStart.Start, changeslineEnd.End);
             OnTokensChanged(changesSpan);
-
         }
 
         private void RemoveDupplicates(IList<LanguageToken> tokens, ITextSnapshot textSnapshot)
         {
-            var tokensList = tokens.Select(t => new {Token = t, Index = tokens.IndexOf(t), SnapShotSpan = t.Span.GetSpan(textSnapshot)}).ToList();
+            var tokensList =
+                tokens.Select(
+                    t => new {Token = t, Index = tokens.IndexOf(t), SnapShotSpan = t.Span.GetSpan(textSnapshot)}).ToList
+                    ();
             var noDuplicate = tokensList.Where(t =>
-                !tokensList.Any(ti => ti.SnapShotSpan.IntersectsWith(t.SnapShotSpan) && ti.Index > t.Index) );
+                                               !tokensList.Any(
+                                                   ti =>
+                                                   ti.SnapShotSpan.IntersectsWith(t.SnapShotSpan) && ti.Index > t.Index));
             _tokens = noDuplicate.Select(t => t.Token).ToList();
         }
 
@@ -130,7 +168,8 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers
             return tokens;
         }
 
-        private void AddTokensFromText(ITextSnapshot snapshot, IList<LanguageToken> tokens, int startIndex, string spanText)
+        private void AddTokensFromText(ITextSnapshot snapshot, IList<LanguageToken> tokens, int startIndex,
+                                       string spanText)
         {
             Match match = _resourcesRegex.Match(spanText);
             while (match.Success)
@@ -159,18 +198,6 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers
             if (handler != null)
             {
                 handler(this, eventArgs);
-            }
-        }
-
-        public void Dispose()
-        {
-            if (_buffer != null)
-            {
-                _buffer.ChangedLowPriority -= BufferChanged;
-            }
-            if (_keysProvider != null)
-            {
-                _keysProvider.KeysUpdated -= KeysUpdated;
             }
         }
     }

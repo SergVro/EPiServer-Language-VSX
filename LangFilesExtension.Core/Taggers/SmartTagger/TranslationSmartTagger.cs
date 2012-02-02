@@ -1,40 +1,89 @@
-﻿using System;
+﻿#region copyright
+
+// COPYRIGHT (C) 2012 EPISERVER AB
+// 
+// THIS FILE IS PART OF Language files Visual Studio Extension for EPiServer.
+// 
+// Language files Visual Studio Extension for EPiServer IS FREE SOFTWARE: YOU CAN REDISTRIBUTE IT AND/OR MODIFY IT
+// UNDER THE TERMS OF THE GNU LESSER GENERAL PUBLIC LICENSE VERSION v2.1 AS PUBLISHED BY THE FREE SOFTWARE
+// FOUNDATION.
+// 
+// Language files Visual Studio Extension for EPiServer IS DISTRIBUTED IN THE HOPE THAT IT WILL BE USEFUL, BUT WITHOUT
+// ANY WARRANTY; WITHOUT EVEN THE IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+// PURPOSE. SEE THE GNU LESSER GENERAL PUBLIC LICENSE FOR MORE DETAILS.
+// 
+// YOU SHOULD HAVE RECEIVED A COPY OF THE GNU LESSER GENERAL PUBLIC LICENSE ALONG WITH 
+// Language files Visual Studio Extension for EPiServer. IF NOT, SEE <HTTP://WWW.GNU.ORG/LICENSES/>.
+
+#endregion
+
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using EPiServer.Labs.LangFilesExtension.Core.Parser;
 using Microsoft.VisualStudio.Language.Intellisense;
 using Microsoft.VisualStudio.Text;
+using Microsoft.VisualStudio.Text.Editor;
 using Microsoft.VisualStudio.Text.Tagging;
 
 namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.SmartTagger
 {
     public class TranslationSmartTagger : ITagger<TranslationSmartTag>, IDisposable
     {
+        private readonly ITextBuffer _buffer;
         private readonly ICodeParser _parser;
         private readonly IServiceProvider _serviceProvider;
-        private readonly ITextBuffer _buffer;
+        private readonly ITextView _textView;
+        private SnapshotSpan _currentSpan;
+        private LanguageToken _currentToken;
+        private bool _isCurrentSpanActive;
 
-        public TranslationSmartTagger(ICodeParser parser, ITextBuffer buffer, IServiceProvider serviceProvider)
+        public TranslationSmartTagger(ICodeParser parser, ITextBuffer buffer, ITextView textView,
+                                      IServiceProvider serviceProvider)
         {
             _parser = parser;
             _serviceProvider = serviceProvider;
             _buffer = buffer;
+            _textView = textView;
 
             _parser.TokensChanged += TokensChangedEventHandler;
+            _textView.Caret.PositionChanged += CaretPositionChanged;
         }
 
-        #region Implementation of ITagger<TranslationSmartTag>
+        #region IDisposable Members
 
-        public IEnumerable<ITagSpan<TranslationSmartTag>> GetTags(NormalizedSnapshotSpanCollection spans)
+        public void Dispose()
         {
-            IEnumerable<LanguageToken> tokens = _parser.GetTokens(spans);
-            return tokens.Select(t => CreateTag(t.TranslationKeys, t.Span.GetSpan(_buffer.CurrentSnapshot)));
+            if (_parser != null)
+            {
+                _parser.TokensChanged -= TokensChangedEventHandler;
+            }
         }
-
-        public event EventHandler<SnapshotSpanEventArgs> TagsChanged;
 
         #endregion
+
+        private void CaretPositionChanged(object sender, CaretPositionChangedEventArgs e)
+        {
+            // Clean smart-tag from previous position
+            if (_isCurrentSpanActive)
+            {
+                _isCurrentSpanActive = false;
+                var eventArgs = new SnapshotSpanEventArgs(_currentSpan);
+                OnTagsChanged(eventArgs);
+            }
+
+            // Gettings smart-tags for the new position
+            var positionSpan = new SnapshotSpan(e.NewPosition.BufferPosition, e.NewPosition.BufferPosition);
+            _currentToken = _parser.GetTokens(positionSpan).FirstOrDefault();
+            if (_currentToken != null)
+            {
+                _isCurrentSpanActive = true;
+                _currentSpan = _currentToken.Span.GetSpan(_buffer.CurrentSnapshot);
+                var eventArgs = new SnapshotSpanEventArgs(_currentSpan);
+                OnTagsChanged(eventArgs);
+            }
+        }
 
         private TagSpan<TranslationSmartTag> CreateTag(IEnumerable<TranslationKeyInfo> tarnslations,
                                                        SnapshotSpan snapshotSpan)
@@ -64,12 +113,20 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.SmartTagger
             if (handler != null) handler(this, e);
         }
 
-        public void Dispose()
+        #region Implementation of ITagger<TranslationSmartTag>
+
+        public IEnumerable<ITagSpan<TranslationSmartTag>> GetTags(NormalizedSnapshotSpanCollection spans)
         {
-            if (_parser != null)
+            // Returns tags only if GetTags was called as a result of the caret postion change
+            if (_isCurrentSpanActive && spans.FirstOrDefault() == _currentSpan)
             {
-                _parser.TokensChanged -= TokensChangedEventHandler;
+                yield return
+                    CreateTag(_currentToken.TranslationKeys, _currentToken.Span.GetSpan(_buffer.CurrentSnapshot));
             }
         }
+
+        public event EventHandler<SnapshotSpanEventArgs> TagsChanged;
+
+        #endregion
     }
 }

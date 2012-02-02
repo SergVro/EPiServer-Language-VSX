@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
   <Identifier Id="EPiServerLanguageFiles.SergiiVorushylo.c80bb138-d693-4f9e-8f13-7f73c0de9e91">
-    <Name>EPiServer Language Files extension</Name>
+    <Name>Language Files extension for EPiServer</Name>
     <Author>Sergii Vorushylo</Author>
     <Version>1.0</Version>
     <Description xml:space="preserve">EPiServer language files support for Visual Studio 2010</Description>

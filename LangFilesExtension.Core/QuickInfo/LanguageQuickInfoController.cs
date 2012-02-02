@@ -1,18 +1,38 @@
-﻿using System.Collections.Generic;
+﻿#region copyright
+
+// COPYRIGHT (C) 2012 EPISERVER AB
+// 
+// THIS FILE IS PART OF Language files Visual Studio Extension for EPiServer.
+// 
+// Language files Visual Studio Extension for EPiServer IS FREE SOFTWARE: YOU CAN REDISTRIBUTE IT AND/OR MODIFY IT
+// UNDER THE TERMS OF THE GNU LESSER GENERAL PUBLIC LICENSE VERSION v2.1 AS PUBLISHED BY THE FREE SOFTWARE
+// FOUNDATION.
+// 
+// Language files Visual Studio Extension for EPiServer IS DISTRIBUTED IN THE HOPE THAT IT WILL BE USEFUL, BUT WITHOUT
+// ANY WARRANTY; WITHOUT EVEN THE IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+// PURPOSE. SEE THE GNU LESSER GENERAL PUBLIC LICENSE FOR MORE DETAILS.
+// 
+// YOU SHOULD HAVE RECEIVED A COPY OF THE GNU LESSER GENERAL PUBLIC LICENSE ALONG WITH 
+// Language files Visual Studio Extension for EPiServer. IF NOT, SEE <HTTP://WWW.GNU.ORG/LICENSES/>.
+
+#endregion
+
+using System.Collections.Generic;
 using Microsoft.VisualStudio.Language.Intellisense;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Editor;
 
 namespace EPiServer.Labs.LangFilesExtension.Core.QuickInfo
 {
-    class LanguageQuickInfoController : IIntellisenseController
+    internal class LanguageQuickInfoController : IIntellisenseController
     {
-        private ITextView _textView;
-        private IList<ITextBuffer> _subjectBuffers;
-        private LanguageQuickInfoControllerProvider _provider;
+        private readonly LanguageQuickInfoControllerProvider _provider;
+        private readonly IList<ITextBuffer> _subjectBuffers;
         private IQuickInfoSession _session;
+        private ITextView _textView;
 
-        public LanguageQuickInfoController(ITextView textView, IList<ITextBuffer> subjectBuffers, LanguageQuickInfoControllerProvider provider)
+        public LanguageQuickInfoController(ITextView textView, IList<ITextBuffer> subjectBuffers,
+                                           LanguageQuickInfoControllerProvider provider)
         {
             _textView = textView;
             _subjectBuffers = subjectBuffers;
@@ -21,26 +41,7 @@ namespace EPiServer.Labs.LangFilesExtension.Core.QuickInfo
             _textView.MouseHover += OnTextViewMouseHover;
         }
 
-        void OnTextViewMouseHover(object sender, MouseHoverEventArgs e)
-        {
-            //find the mouse position by mapping down to the subject buffer
-            SnapshotPoint? point = _textView.BufferGraph.MapDownToFirstMatch
-                 (new SnapshotPoint(_textView.TextSnapshot, e.Position),
-                PointTrackingMode.Positive,
-                snapshot => _subjectBuffers.Contains(snapshot.TextBuffer),
-                PositionAffinity.Predecessor);
-
-            if (point != null)
-            {
-                ITrackingPoint triggerPoint = point.Value.Snapshot.CreateTrackingPoint(point.Value.Position,
-                PointTrackingMode.Positive);
-
-                if (!_provider.QuickInfoBroker.IsQuickInfoActive(_textView))
-                {
-                    _session = _provider.QuickInfoBroker.TriggerQuickInfo(_textView, triggerPoint, true);
-                }
-            }
-        }
+        #region IIntellisenseController Members
 
         /// <summary>
         /// Detaches the controller from the specified <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView"/>.
@@ -50,7 +51,7 @@ namespace EPiServer.Labs.LangFilesExtension.Core.QuickInfo
         {
             if (_textView == textView)
             {
-                _textView.MouseHover -= this.OnTextViewMouseHover;
+                _textView.MouseHover -= OnTextViewMouseHover;
                 _textView = null;
             }
         }
@@ -75,6 +76,29 @@ namespace EPiServer.Labs.LangFilesExtension.Core.QuickInfo
         /// </remarks>
         public void DisconnectSubjectBuffer(ITextBuffer subjectBuffer)
         {
+        }
+
+        #endregion
+
+        private void OnTextViewMouseHover(object sender, MouseHoverEventArgs e)
+        {
+            //find the mouse position by mapping down to the subject buffer
+            SnapshotPoint? point = _textView.BufferGraph.MapDownToFirstMatch
+                (new SnapshotPoint(_textView.TextSnapshot, e.Position),
+                 PointTrackingMode.Positive,
+                 snapshot => _subjectBuffers.Contains(snapshot.TextBuffer),
+                 PositionAffinity.Predecessor);
+
+            if (point != null)
+            {
+                ITrackingPoint triggerPoint = point.Value.Snapshot.CreateTrackingPoint(point.Value.Position,
+                                                                                       PointTrackingMode.Positive);
+
+                if (!_provider.QuickInfoBroker.IsQuickInfoActive(_textView))
+                {
+                    _session = _provider.QuickInfoBroker.TriggerQuickInfo(_textView, triggerPoint, true);
+                }
+            }
         }
     }
 }
