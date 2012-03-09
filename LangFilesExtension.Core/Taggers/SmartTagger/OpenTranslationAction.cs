@@ -36,7 +36,7 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers.SmartTagger
         {
             _translationKeyInfo = translationKeyInfo;
             _serviceProvider = serviceProvider;
-            DisplayText = _translationKeyInfo.FilePath + " line " + _translationKeyInfo.LineNumber;
+            DisplayText = string.Format("{0}: {1} line {2}", _translationKeyInfo.Language, _translationKeyInfo.FilePath, _translationKeyInfo.LineNumber);
             IsEnabled = true;
         }
 
