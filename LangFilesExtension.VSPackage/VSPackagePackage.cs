@@ -101,6 +101,8 @@ namespace EPiServer.Labs.LangFilesExtension.VSPackage
 
             _solutionEvents = _dte.Events.SolutionEvents;
             _solutionEvents.Opened += SolutionOpened;
+
+            SolutionOpened(); // we have to trigger this manually since in VS2012 Opened event is not triggered when the solution is opened at the same time as Visual Studio is launched (for example by double clicking the solution file in explorer)
         }
 
         private void SolutionOpened()

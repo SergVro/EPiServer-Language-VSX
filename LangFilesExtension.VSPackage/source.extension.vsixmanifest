@@ -3,8 +3,8 @@
   <Identifier Id="EPiServerLanguageFiles.SergiiVorushylo.c80bb138-d693-4f9e-8f13-7f73c0de9e91">
     <Name>Language files extension for EPiServer</Name>
     <Author>Sergii Vorushylo</Author>
-    <Version>1.1</Version>
-    <Description xml:space="preserve">EPiServer language files support for Visual Studio 2010</Description>
+    <Version>1.2</Version>
+    <Description xml:space="preserve">EPiServer language files support for Visual Studio 2010/2012</Description>
     <Locale>1033</Locale>
     <Icon>Icon.png</Icon>
     <PreviewImage>Screen.png</PreviewImage>
@@ -15,8 +15,13 @@
         <Edition>Premium</Edition>
         <Edition>Pro</Edition>
       </VisualStudio>
+      <VisualStudio Version="11.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+      </VisualStudio>
     </SupportedProducts>
-    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />
   </Identifier>
   <References>
     <Reference Id="Microsoft.VisualStudio.MPF" MinVersion="10.0">
