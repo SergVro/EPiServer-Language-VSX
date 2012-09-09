@@ -59,7 +59,8 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Parser
             var searchKey = key.Trim().TrimStart('/');
             searchKey = searchKey.Replace(".", "/");
             searchKey = string.Format("/{0}", searchKey);
-            return KeysLookup[searchKey];
+            var translationKeyInfos = KeysLookup[searchKey];
+            return translationKeyInfos;
         }
 
         public IEnumerable<TranslationKeyInfo> GetKeysForPosition(string filePath, int lineNumber, string keyEnding)

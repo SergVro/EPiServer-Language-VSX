@@ -32,7 +32,7 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Taggers
         private readonly ITranslationKeysProvider _keysProvider;
 
         private readonly Regex _resourcesRegex =
-            new Regex(@"(\<\%\$\s*Resources\s*:\s*EPiServer\s*,\s*(?<key>(\w+\W?)+)\%\>)|(""(?<key>(/\w+)+)"")",
+            new Regex(@"(\<\%\$\s*Resources\s*:\s*EPiServer\s*,\s*(?<key>(\w+\W?)+)\%\>)|(""(?<key>(/(\w+(\[@\w+='\w+'\])?))+)"")",
                       RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.Multiline);
 
         private IList<LanguageToken> _tokens;

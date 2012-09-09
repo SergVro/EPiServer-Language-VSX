@@ -39,6 +39,11 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Parser
         private readonly LanguageInfo _translations;
         private EventHandler _dataUpdated;
 
+        readonly HashSet<String> _attributesToSkip = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+            {
+                "see", "comment", "file", "notapproved"
+            };
+
         private LanguageFilesParser()
         {
             _translations = new LanguageInfo();
@@ -171,8 +176,18 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Parser
                 return;
             }
 
-            var keys = ReadTranslationKeys(doc, xmlFile);
+            var keys = ReadTranslationKeys(doc, xmlFile).ToList();
+            ProcessSeeReferences(keys);
             _translations.AddKeys(keys);
+        }
+
+        private void ProcessSeeReferences(List<TranslationKeyInfo> keys)
+        {
+            var keysWithReferences = keys.Where(k => !String.IsNullOrEmpty(k.SeeReference));
+            foreach (var keyWithReference in keysWithReferences)
+            {
+                keyWithReference.Value = (keys.FirstOrDefault(k => Equals(k.Key, keyWithReference.SeeReference)) ?? keyWithReference).Value;
+            }
         }
 
         public IEnumerable<TranslationKeyInfo> ReadTranslationKeys(string text, string xmlFile)
@@ -218,8 +233,13 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Parser
                     var ancestors = xNode.Ancestors().ToList();
                     var ancestorsString = ancestors.Take(ancestors.Count - 2)
                         // Skip two last ancestors - languages and language nodes
-                        .Aggregate("", (curr, el) => el.Name + KeysSeparator + curr);
-                    var key = KeysSeparator + ancestorsString + xNode.Name;
+                        .Aggregate("", AddElementToPath);
+
+
+                    var key = KeysSeparator + ancestorsString + GetElementXPath(xNode);
+                    var seeAttribute = xNode.Attributes("see").FirstOrDefault();
+                    var seeReference = seeAttribute == null ? null : seeAttribute.Value;
+                    
                     var value = xNode.Value;
 
                     int lineNumber = ((IXmlLineInfo) xNode).HasLineInfo() ? ((IXmlLineInfo) xNode).LineNumber : -1;
@@ -228,6 +248,7 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Parser
                                               {
                                                   Key = key,
                                                   Value = value,
+                                                  SeeReference = seeReference,
                                                   FilePath = xmlFile,
                                                   LineNumber = lineNumber,
                                                   Language = languageId
@@ -236,6 +257,21 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Parser
                     yield return translationInfo;
                 }
             }
+        }
+
+        private string AddElementToPath(string curr, XElement el)
+        {
+            return GetElementXPath(el) + KeysSeparator + curr;
+        }
+
+        private string GetElementXPath(XElement el)
+        {
+            var attribute = el.Attributes().FirstOrDefault(a => !_attributesToSkip.Contains(a.Name.LocalName));
+            if (attribute != null)
+            {
+                return el.Name + "[@" + attribute.Name + "='" + attribute.Value + "']";
+            }
+            return el.Name.ToString();
         }
 
         private void GetFileNamesFromProjectItem(List<string> fileNames, ProjectItem projectItem)

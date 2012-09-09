@@ -26,5 +26,6 @@ namespace EPiServer.Labs.LangFilesExtension.Core.Parser
         public string FilePath { get; set; }
         public int LineNumber { get; set; }
         public string Language { get; set; }
+        public string SeeReference { get; set; }
     }
 }

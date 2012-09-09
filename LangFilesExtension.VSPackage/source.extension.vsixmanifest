@@ -3,7 +3,7 @@
   <Identifier Id="EPiServerLanguageFiles.SergiiVorushylo.c80bb138-d693-4f9e-8f13-7f73c0de9e91">
     <Name>Language files extension for EPiServer</Name>
     <Author>Sergii Vorushylo</Author>
-    <Version>1.2</Version>
+    <Version>1.3</Version>
     <Description xml:space="preserve">EPiServer language files support for Visual Studio 2010/2012</Description>
     <Locale>1033</Locale>
     <Icon>Icon.png</Icon>
