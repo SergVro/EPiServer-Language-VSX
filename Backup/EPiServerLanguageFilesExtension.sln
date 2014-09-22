@@ -1,8 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
-MinimumVisualStudioVersion = 10.0.40219.1
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{43707EF9-303B-46F9-BC9D-64F60EB73D2C}"
 	ProjectSection(SolutionItems) = preProject
 		EPiServerLanguageFilesExtension.vsmdi = EPiServerLanguageFilesExtension.vsmdi
@@ -19,6 +17,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LangFilesExtension.Tests", "LangFilesExtension.Tests\LangFilesExtension.Tests.csproj", "{F3AF0992-2DAB-4D3E-8BFE-CE458BCFABC0}"
 EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = EPiServerLanguageFilesExtension.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -42,8 +43,5 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F3AF0992-2DAB-4D3E-8BFE-CE458BCFABC0} = {DEA90955-18FD-4DC1-B45B-BC29AB7A3D64}
-	EndGlobalSection
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = EPiServerLanguageFilesExtension.vsmdi
 	EndGlobalSection
 EndGlobal
